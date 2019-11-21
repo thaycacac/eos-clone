@@ -4,7 +4,7 @@
   </button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .f-button {
   border-radius: 0;
   background: #ffffbd;

@@ -3,3 +3,8 @@ html>body {
   color: blue;
   font-size: 15px;
 }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}

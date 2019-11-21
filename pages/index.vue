@@ -2,14 +2,14 @@
   <b-container fluid class="f-wrapall">
     <b-row class="f-row" no-gutters>
       <b-col cols="5">
-        <div class="float-right">
+        <div class="float-right mr-3">
           <f-checkbox />
           <f-button />
         </div>
         <f-information />
       </b-col>
       <b-col cols="2">
-        <img class="f-flag" :src="require('@/assets/images/american.png')" alt="flag" />
+        <f-center />
       </b-col>
     </b-row>
   </b-container>
@@ -20,11 +20,13 @@ import data from "./data";
 import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
 import FInformation from "@/components/information";
+import FCenter from "@/components/center";
 export default {
   components: {
     FCheckbox,
     FButton,
-    FInformation
+    FInformation,
+    FCenter
   },
   data() {
     return {
@@ -35,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss">
-.f-flag {
-  width: 200px;
+.f-wrapall {
+  background: red;
 }
 </style>
