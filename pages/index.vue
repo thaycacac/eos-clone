@@ -12,6 +12,10 @@
         <f-center />
       </b-col>
     </b-row>
+    <div>
+      <f-tabs />
+      <f-content />
+    </div>
   </b-container>
 </template>
 
@@ -21,12 +25,16 @@ import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
 import FInformation from "@/components/information";
 import FCenter from "@/components/center";
+import FTabs from "@/components/common/tabs";
+import FContent from "@/components/content";
 export default {
   components: {
     FCheckbox,
     FButton,
     FInformation,
-    FCenter
+    FCenter,
+    FTabs,
+    FContent
   },
   data() {
     return {
