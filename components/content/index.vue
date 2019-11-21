@@ -57,6 +57,7 @@ export default {
       background: white;
       padding: 5px;
       color: black;
+      height: calc(100% - 20px);
       .f-term {
         white-space: pre-line;
         line-height: 30px;

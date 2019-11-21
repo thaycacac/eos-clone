@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid class="f-wrapall">
-    <b-row class="f-row" no-gutters>
+  <b-container fluid class="f-wrapall d-flex justify-content-between flex-column">
+    <b-row class="f-header" no-gutters>
       <b-col cols="5">
         <div class="float-right mr-3">
           <f-checkbox />
@@ -12,9 +12,16 @@
         <f-center />
       </b-col>
     </b-row>
-    <div>
+    <div class="mb-2 f-body">
       <f-tabs />
-      <f-content />
+      <f-content class="f-box" />
+    </div>
+    <div class="f-footer">
+      <f-question v-for="n in 50" :key="n" :number="n" :completed="n%2===0 ? true : false" />
+      <br />
+      <f-checkbox />
+      <br />
+      <f-button />
     </div>
   </b-container>
 </template>
@@ -27,6 +34,7 @@ import FInformation from "@/components/information";
 import FCenter from "@/components/center";
 import FTabs from "@/components/common/tabs";
 import FContent from "@/components/content";
+import FQuestion from "@/components/common/question";
 export default {
   components: {
     FCheckbox,
@@ -34,7 +42,8 @@ export default {
     FInformation,
     FCenter,
     FTabs,
-    FContent
+    FContent,
+    FQuestion
   },
   data() {
     return {
@@ -47,5 +56,14 @@ export default {
 <style lang="scss">
 .f-wrapall {
   background: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100vh;
+  .f-body {
+    height: 100%;
+    .f-box {
+      height: calc(100vh - 321px);
+    }
+  }
 }
 </style>
