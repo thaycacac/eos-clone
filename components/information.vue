@@ -2,7 +2,7 @@
   <div class="f-wrap-info">
     <div>
       <span class="f-label f-machine">Machine:</span>
-      <span class="f-value">DESKTOP-AOAF0JM</span>
+      <span class="f-value">THAYCACAC_SERVER</span>
       <span class="f-label f-student">Student:</span>
       <span class="f-value">{{ student }}</span>
     </div>
@@ -38,7 +38,7 @@
       </span>
       <span class="f-label f-size">Size:</span>
       <span class="f-value">
-        <f-number value="10" disabled="false" />
+        <f-number value="15" disabled="false" />
       </span>
       <span class="f-label f-time-left mr-3">Time Left:</span>
     </div>

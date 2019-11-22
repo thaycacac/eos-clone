@@ -6,15 +6,10 @@ const store = () => new Vuex.Store({
     server: '',
     total: 0,
     exam_code: '',
-    student: ''
-  },
-  actions: {
-    ADD_SET({
-      commit,
-      data
-    }) {
-      commit('addSet', data)
-    }
+    student: '',
+    font_size: 15,
+    font_family: 'Microsoft Sans Serif',
+    is_finish: false
   },
   mutations: {
     addSets(state, data) {
@@ -31,6 +26,15 @@ const store = () => new Vuex.Store({
     },
     addStudent(state, data) {
       state.student = data
+    },
+    addFontSize(state, data) {
+      state.font_size = data
+    },
+    addFontFamily(state, data) {
+      state.font_family = data
+    },
+    addFinish(state, data) {
+      state.is_finish = data
     }
   },
   getters: {
@@ -48,6 +52,15 @@ const store = () => new Vuex.Store({
     },
     student(state) {
       return state.student
+    },
+    font_size(state) {
+      return state.font_size
+    },
+    font_family(state) {
+      return state.font_family
+    },
+    is_finish(state) {
+      return state.is_finish
     }
   }
 })

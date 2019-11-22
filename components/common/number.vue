@@ -1,8 +1,15 @@
 <template>
-  <input class="f-number" type="number" :value="value" :disabled="!disabled" />
+  <input
+    class="f-number"
+    type="number"
+    v-model="number"
+    :disabled="!disabled"
+    @change="addFontSize(number)"
+  />
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   props: {
     disabled: {
@@ -13,7 +20,13 @@ export default {
       type: Number,
       default: 0
     }
-  }
+  },
+  data() {
+    return {
+      number: this.value
+    };
+  },
+  methods: mapMutations(["addFontSize"])
 };
 </script>
 

@@ -12,7 +12,7 @@
     </div>
     <div class="f-right">
       <p class="f-title">Multiple choices {{ selected }}/50</p>
-      <div class="f-content">
+      <div class="f-content" :style="`font-size: ${font_size}px; font-family: ${font_family}`">
         <p>(Choose 1 answer)</p>
         <span class="f-term" v-html="sets[selected - 1].question" />
       </div>
@@ -39,7 +39,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["sets"])
+    ...mapGetters(["sets", "font_size", "font_family"])
   },
   methods: {
     handleChoose(answer) {
