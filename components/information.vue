@@ -14,7 +14,7 @@
     </div>
     <div>
       <span class="f-label f-duration">Duration:</span>
-      <span class="f-value">{{ Math.round(total * 1.2) }} minutes</span>
+      <span class="f-value">{{ total }} minutes</span>
       <span class="f-label f-open-code">Open Code:</span>
       <span class="f-value">
         <f-input />
@@ -28,7 +28,7 @@
       <span class="f-value">{{ total }}</span>
       <span class="f-label f-vol">Vol:</span>
       <span class="f-value">
-        <f-number value="8" />
+        <f-number :value="8" />
       </span>
     </div>
     <div>
@@ -38,7 +38,7 @@
       </span>
       <span class="f-label f-size">Size:</span>
       <span class="f-value">
-        <f-number value="15" disabled="false" />
+        <f-number :value="15" :disabled="false" />
       </span>
       <span class="f-label f-time-left mr-3">Time Left:</span>
     </div>
