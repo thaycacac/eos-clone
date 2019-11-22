@@ -3,7 +3,7 @@
     class="f-number"
     type="number"
     v-model="number"
-    :disabled="!disabled"
+    :disabled="disabled"
     @change="addFontSize(number)"
   />
 </template>
@@ -14,7 +14,7 @@ export default {
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: true
     },
     value: {
       type: Number,
