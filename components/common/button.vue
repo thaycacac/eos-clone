@@ -1,5 +1,11 @@
 <template>
-  <input class="f-button" type="button" value="Show Question" />
+  <div>
+    <input class="f-button" type="button" value="Show Question" />
+    <button
+      onclick="document.getElementById('id01').style.display='block'"
+      class="w3-button w3-black"
+    >Open Modal</button>
+  </div>
 </template>
 
 <style lang="scss" scoped>
