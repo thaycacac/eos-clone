@@ -1,23 +1,36 @@
 <template>
   <label class="f-container">
     {{ label }}
-    <input type="checkbox" v-model="answer" :value="label" />
+    <input type="checkbox" v-model="check" :value="label" @click="handleChoose" />
     <span class="f-checkmark"></span>
   </label>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   props: {
     label: {
       type: String,
       default: "A"
+    },
+    selected: {
+      type: Number,
+      default: 1
     }
   },
   data() {
     return {
-      answer: ""
+      check: this.sets[this.selected - 1].choose.includes(this.label)
     };
+  },
+  computed: {
+    ...mapGetters(["sets"])
+  },
+  methods: {
+    handleChoose() {
+      this.$emit("handleChoose", this.label);
+    }
   }
 };
 </script>

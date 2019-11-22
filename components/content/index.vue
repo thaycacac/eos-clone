@@ -2,7 +2,13 @@
   <div class="f-wrap-content d-flex">
     <div class="f-left">
       <p class="f-answer mt-4">Answer</p>
-      <f-answer v-for="n in sets[selected - 1].number_question" :key="n" :label="answers[n - 1]" />
+      <f-answer
+        v-for="n in sets[selected - 1].number_question"
+        :key="n"
+        :label="answers[n - 1]"
+        :selected="selected"
+        @handleChoose="handleChoose"
+      />
     </div>
     <div class="f-right">
       <p class="f-title">Multiple choices {{ selected }}/50</p>
@@ -34,6 +40,16 @@ export default {
   },
   computed: {
     ...mapGetters(["sets"])
+  },
+  methods: {
+    handleChoose(answer) {
+      if (!this.sets[this.selected - 1].choose.includes(answer)) {
+        this.sets[this.selected - 1].choose.push(answer);
+      } else {
+        const index = this.sets[this.selected - 1].choose.indexOf(answer);
+        this.sets[this.selected - 1].choose.splice(index, 1);
+      }
+    }
   }
 };
 </script>

@@ -21,7 +21,7 @@
         v-for="n in sets.length"
         :key="n"
         :number="n"
-        :completed="sets[n - 1].choose !== null ? true : false"
+        :completed="sets[n - 1].choose.length !== 0 ? true : false"
         @handleSelected="handleSelected"
       />
       <br />
@@ -72,7 +72,7 @@ export default {
         delete item.term;
       }
 
-      item.choose = null;
+      item.choose = [];
       item.number_question = item.question.split("\n").length - 1;
       return item;
     });
