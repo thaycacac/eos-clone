@@ -29,6 +29,7 @@
       <br />
       <f-button />
     </div>
+    <f-modal />
   </b-container>
 </template>
 
@@ -41,6 +42,7 @@ import FCenter from "@/components/center";
 import FTabs from "@/components/common/tabs";
 import FContent from "@/components/content";
 import FQuestion from "@/components/common/question";
+import FModal from "@/components/modal";
 export default {
   components: {
     FCheckbox,
@@ -49,7 +51,8 @@ export default {
     FCenter,
     FTabs,
     FContent,
-    FQuestion
+    FQuestion,
+    FModal
   },
   data() {
     return {
