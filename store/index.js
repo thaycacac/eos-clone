@@ -2,7 +2,11 @@ import Vuex from 'vuex'
 
 const store = () => new Vuex.Store({
   state: {
-    set: null
+    sets: [],
+    server: '',
+    total: 0,
+    exam_code: '',
+    student: ''
   },
   actions: {
     ADD_SET({
@@ -13,13 +17,37 @@ const store = () => new Vuex.Store({
     }
   },
   mutations: {
-    addSet(state, data) {
-      state.set = data
+    addSets(state, data) {
+      state.sets = data
+    },
+    addServer(state, data) {
+      state.server = data
+    },
+    addTotal(state, data) {
+      state.total = data
+    },
+    addExamCode(state, data) {
+      state.exam_code = data
+    },
+    addStudent(state, data) {
+      state.student = data
     }
   },
   getters: {
-    set(state) {
+    sets(state) {
       return state.set
+    },
+    server(state) {
+      return state.server
+    },
+    total(state) {
+      return state.total
+    },
+    exam_code(state) {
+      return state.exam_code
+    },
+    student(state) {
+      return state.student
     }
   }
 })

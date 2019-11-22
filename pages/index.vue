@@ -18,7 +18,7 @@
     </div>
     <div class="f-footer">
       <f-question
-        v-for="n in set.terms.length"
+        v-for="n in sets.length"
         :key="n"
         :number="n"
         :completed="n%2===0 ? true : false"
@@ -51,9 +51,33 @@ export default {
     FQuestion
   },
   asyncData({ store }) {
-    store.commit("addSet", data);
+    const { created_by, title, terms, id } = data;
+
+    const sets = terms.map(item => {
+      if (item.definition.length >= item.term.length) {
+        item.question = item.definition;
+        item.answer = item.term;
+        delete item.definition;
+        delete item.term;
+      } else {
+        item.question = item.term;
+        item.answer = item.definition;
+        delete item.definition;
+        delete item.term;
+      }
+
+      item.choose = "";
+      item.number_question = item.question.split("\n\n").length - 1;
+      return item;
+    });
+
+    store.commit("addServer", id);
+    store.commit("addTotal", terms.length);
+    store.commit("addExamCode", title);
+    store.commit("addStudent", created_by);
+    store.commit("addSets", terms);
     return {
-      set: data
+      sets: sets
     };
   }
 };
