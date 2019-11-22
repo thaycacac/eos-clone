@@ -1,9 +1,18 @@
 <template>
   <div>
     <img class="f-flag" :src="require('@/assets/images/american.png')" alt="flag" />
-    <span class="f-time">42:44</span>
+    <span class="f-time">42:00</span>
   </div>
 </template>
+
+<script>
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters(["set"])
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 .f-flag {

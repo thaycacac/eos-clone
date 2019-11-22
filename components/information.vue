@@ -4,17 +4,17 @@
       <span class="f-label f-machine">Machine:</span>
       <span class="f-value">DESKTOP-AOAF0JM</span>
       <span class="f-label f-student">Student:</span>
-      <span class="f-value">hiephhse04809</span>
+      <span class="f-value">{{ set.created_by }}</span>
     </div>
     <div>
       <span class="f-label f-server">Server:</span>
-      <span class="f-value">Eng_EOS_02022</span>
+      <span class="f-value">Eng_EOS_{{ set.id }}</span>
       <span class="f-label f-exam-code">Exam Code:</span>
-      <span class="f-value">SWR302</span>
+      <span class="f-value">{{ set.title }}</span>
     </div>
     <div>
       <span class="f-label f-duration">Duration:</span>
-      <span class="f-value">60 minutes</span>
+      <span class="f-value">{{ Math.round(set.terms.length * 1.2) }} minutes</span>
       <span class="f-label f-open-code">Open Code:</span>
       <span class="f-value">
         <f-input />
@@ -25,7 +25,7 @@
       <span class="f-label f-q-mark">Q mark:</span>
       <span class="f-value">1</span>
       <span class="f-label f-total-marks">Total Marks:</span>
-      <span class="f-value">50</span>
+      <span class="f-value">{{ set.terms.length }}</span>
       <span class="f-label f-vol">Vol:</span>
       <span class="f-value">
         <f-number value="8" />
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import FInput from "@/components/common/input";
 import FButton from "@/components/common/button";
 import FNumber from "@/components/common/number";
@@ -56,6 +57,9 @@ export default {
     FButton,
     FNumber,
     FSelect
+  },
+  computed: {
+    ...mapGetters(["set"])
   }
 };
 </script>

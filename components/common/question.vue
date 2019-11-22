@@ -12,7 +12,7 @@ export default {
   props: {
     number: {
       type: Number,
-      default: "1"
+      default: 1
     },
     completed: {
       type: Boolean,

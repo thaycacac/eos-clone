@@ -17,7 +17,12 @@
       <f-content class="f-box" />
     </div>
     <div class="f-footer">
-      <f-question v-for="n in 50" :key="n" :number="n" :completed="n%2===0 ? true : false" />
+      <f-question
+        v-for="n in set.terms.length"
+        :key="n"
+        :number="n"
+        :completed="n%2===0 ? true : false"
+      />
       <br />
       <f-checkbox />
       <br />
@@ -45,9 +50,10 @@ export default {
     FContent,
     FQuestion
   },
-  data() {
+  asyncData({ store }) {
+    store.commit("addSet", data);
     return {
-      data
+      set: data
     };
   }
 };
