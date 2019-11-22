@@ -1,12 +1,12 @@
-const data = {
-  "id": 387370660,
-  "url": "https://quizlet.com/387370660/swr302-flash-cards/",
-  "title": "SWR302",
+export default {
+  "id": 386568016,
+  "url": "https://quizlet.com/386568016/prn292_1-flash-cards/",
+  "title": "PRN292_1",
   "created_by": "Thaycacac",
-  "term_count": 91,
-  "created_date": 1554212601,
-  "modified_date": 1555328390,
-  "published_date": 1554212617,
+  "term_count": 46,
+  "created_date": 1554039799,
+  "modified_date": 1554039808,
+  "published_date": 1554039802,
   "has_images": false,
   "subjects": [],
   "visibility": "public",
@@ -28,643 +28,326 @@ const data = {
   },
   "class_ids": [],
   "terms": [{
-      "id": 13413744824,
-      "term": "B",
-      "definition": "Which of the following is NOT a good characteristic well written of a software requirements specification?\n\nA. Ranked\n\nB. Redundant\n\nC. Consistent\n\nD. Verifiable",
+      "id": 13383529372,
+      "term": "A",
+      "definition": "Which variables can use only by one user but in all pages? \nA Session\nB. Application\nC. ViewState\nD. Cookie",
       "image": null,
       "rank": 0
     },
     {
-      "id": 13413744825,
+      "id": 13383529373,
       "term": "B",
-      "definition": "Which is NOT the most important characteristics of product backlog?\n\nA. Ranking of features is done based on business value, technical value, risk management or strategic fitness.\n\nB. Lowest ranking items are decomposed into smaller stories during release planning so that they can be completed in future iterations\n\nC. Highest ranking items are decomposed into smaller stories during release planning so that they can be completed in future iterations\n\nD. Multiple teams can work on a single product backlog.\n\nE. Each product should have one product backlog which can have a set of large to very large features.",
+      "definition": "Choose one correct statement about server-side codes quizlet\nA. Server side code is executed on the browser\nB. Server side code is executed at the server side on IIS in ASP.NET framework",
       "image": null,
       "rank": 1
     },
     {
-      "id": 13413744826,
-      "term": "D",
-      "definition": "A key tool for software designer, developer and their test team is to cany out their respective tasks is defined by:\n\nA. Technical documentation\n\nB. User document\n\nC. Software design documentation\n\nD. Requirement documentation",
+      "id": 13383529374,
+      "term": "C",
+      "definition": "Which variables can use by all users and in all pages?\n[A] Session \n[B] Cookie \n[C] Application\n[D] ViewState",
       "image": null,
       "rank": 2
     },
     {
-      "id": 13413744828,
-      "term": "D",
-      "definition": "Which is(are) the skills of business analyst on Agile project?\n\nA. Understanding of the business area that the project is involved with\n\nB. Understanding of the agile development process\n\nC. Ability to facilitate a team to consensus on scope, design decisions, and implementation decisions\n\nD. All of the mentioned\n\nE. Ability to document requirements formally or informally depending on the need of the project",
+      "id": 13383529375,
+      "term": "A",
+      "definition": "Which property of Control type is used to set a widget should be attached to which side (or sides) of a Form? \nA.Dock\nB.Top\nC.Anchor\nD.Left",
       "image": null,
       "rank": 3
     },
     {
-      "id": 13413744829,
-      "term": "D",
-      "definition": "As requirements are elicited, what source is most likely to impose previously unidentified user processes?\n\nA. Stakeholders\n\nB. The operational environment\n\nC. Application domain specialists\n\nD. The organizational environment",
+      "id": 13383529376,
+      "term": "A",
+      "definition": "The...method of the ...object is used to redirect the user to another page.\n[A] Redirect, Response\n[B] Redirect, Request \n[C] Form.Let, Request \n[D] Form.Get, Request",
       "image": null,
       "rank": 4
     },
     {
-      "id": 13413744830,
-      "term": "B",
-      "definition": "What is a software requirements specification (SRS) document?\n\nA. A document listing the time it takes to execute the existing manual processes\n\nB. A document detailing software requirements and specifications\n\nC. A document which features instructions for how to install new software and test it for errors\n\nD. A document used while testing the software code for validity",
+      "id": 13383529377,
+      "term": "D",
+      "definition": "Which element of a.Net assembly defines numerous flags that enable the runtime to understand the layout of managed file?\nA.win32 file header\nB.CIL code\nC.type metadata\nD. A CLR file header",
       "image": null,
       "rank": 5
     },
     {
-      "id": 13413744831,
-      "term": "C",
-      "definition": "Requirement elicitation is communication intensive and should be aligned with:\n\nA. The cost-benefit analysis\n\nB. The business case\n\nC. The stakeholders' needs and constraints\n\nD. The requirement management plan",
+      "id": 13383529378,
+      "term": "A",
+      "definition": "Which is the most suitable statement to fill the missing code (line 12), if you want to build an in-house XML Web service?\nA. [WebServiceBinding(ConformsTo =WsiProfiles.BasicProfile1_1,EmitConformanceClaims = false)]\nB. [WebServiceBinding(ConformsTo =WsiProfiles.None,EmitConformanceClaims = false)]\nC. [WebServiceBinding(ConformsTo =WsiProfiles.BasicProfile1_1,EmitConformanceClaims = true)]\nD. [WebServiceBinding(ConformsTo =WsiProfiles.BasicProfile1_1)]",
       "image": null,
       "rank": 6
     },
     {
-      "id": 13413744833,
-      "term": "B",
-      "definition": "Giving an example of quality requirements: \"After performing a file backup, the system shall verify the backup copy against the original and report any discrepancies\". This is a (an) ______\n\nA. robustness requirement\n\nB. integrity requirement\n\nC. performance requirement\n\nD. interoperability requirement",
+      "id": 13383529379,
+      "term": "A",
+      "definition": "Which senten about Application variables is Correct?\nA.you cannot change value of an Application variable\nB.Application variable cannot be share among all users\nC.Application variable cannot be share accross all pages\nD.Application variable is maintained by an instance of the HttpApplicationState",
       "image": null,
       "rank": 7
     },
     {
-      "id": 13413744834,
-      "term": "B",
-      "definition": "Which is not a reuse success factor?\n\nA. Organizational culture\n\nB. National culture\n\nC. Quality\n\nD. Terminology\n\nE. Repository\n\nF. Interactions",
+      "id": 13383529380,
+      "term": "A",
+      "definition": "What is CTS?\na. CTS is a formal specification that documents how types must be defined in order\nto be hosted by the CLR.\nb. CTS is a set of rules provided to ensure that products of compilers will work\nproperly in .NET environment.\nc. CTS is physically represented by mscore.dll library.\nd. CTS is a language that sits above any particular platform-specific instruction set.",
       "image": null,
       "rank": 8
     },
     {
-      "id": 13413744835,
+      "id": 13383529381,
       "term": "A",
-      "definition": "If requirements are easily understandable and defined then which software process model is best suited?\n\nA. Waterfall model\n\nB. Agile model\n\nC. Spiral model\n\nD. Prototyping model",
+      "definition": "uppose we have multi-file assembly as follows: lib.dll, part1.netmodule,\npart2.netmodule, part3.netmodule.\nWhich file is the manifest information located in?\na. In lib.dll\nb. In part1.netmodule\nc. In part2.netmodule\nd. Each file contains a piece of manifest information",
       "image": null,
       "rank": 9
     },
     {
-      "id": 13413744836,
-      "term": "D",
-      "definition": "Which is NOT a technique to find missing requirements?\n\nA. Check boundary values for missing requirements\n\nB. Trace system requirements, user requirements, event-response lists, and business rules to their corresponding functional requirements to make sure that all the necessary functionality was derived.\n\nC. Create a checklist of common functional areas to consider for your projects\n\nD. Check a list of tasks corresponding with end users\n\nE. Decompose high-level requirements into enough detail to reveal exactly what is being requested",
+      "id": 13383529382,
+      "term": "B",
+      "definition": "What can be Parameter modifier of a given method\nA.Public and Private\nB. out ,ref and params\nC.params only\nD.out and ref only",
       "image": null,
       "rank": 10
     },
     {
-      "id": 13413744837,
-      "term": "B",
-      "definition": "Which is NOT the helpful of product backlog?\n\nA. It helps in planning the roadmap forthe product\n\nB. It helps in managing the demands of stakeholders\n\nC. It helps in determining what to prioritize first. Team ranks the item and then builds value.\n\nD. It helps in re-ranking the features so that more value can be added to the product-\n\nE. It is prepared so that estimates can be given to each and every feature",
+      "id": 13383529383,
+      "term": "D",
+      "definition": "Which of the following can be defined as generic? (Choose one answer) \n[A] Structures \n[B] Delegates \n[C] Methods. Classes. Interfaces \n[D] All of the others",
       "image": null,
       "rank": 11
     },
     {
-      "id": 13413744838,
-      "term": "D",
-      "definition": "Which activities are NOT belong to requirements status tracking?\n\nA. Tracking the status distribution of all requirements\n\nB. Recording the status of each requirements\n\nC. Defining possible statuses\n\nD. Tracking individual requirements versions",
+      "id": 13383529384,
+      "term": "A",
+      "definition": "What is output of the following code?\nusing System;\nclass Program\n{\ndelegate void Display();\nstatic void Main()\n{\nDisplay d1 = new Display(DisplayHello);\nd1();\n}\nstatic void DisplayHello()\n{\nConsole.WriteLine(\"Hello\");\n}\n}\na. Hello\nb. Compile error at line: delegate void Display();\nc. Compile error at line: d1();\nd. Runtime error",
       "image": null,
       "rank": 12
     },
     {
-      "id": 13413744839,
-      "term": "A",
-      "definition": "(15438) To depict the complex logic, which representation technique should be used?\n\nA. Decision tree\n\nB. Context diagram\n\nC. Swimlane diagram\n\nD. State-transition diagram\n\nE. Data flow diagram\n\nF. Data dictionary",
+      "id": 13383529385,
+      "term": "D",
+      "definition": "Suppose a Generic class called SortObjects is to be made capable of sorting objects of any type (Integer, Single, Byte etc.). Which of the following programming constructs should be used to implement the comparision function?\nA. Namespace\nB. Interface\nC. Encapsulation\nD. Delegate\nE. Attribute",
       "image": null,
       "rank": 13
     },
     {
-      "id": 13413744840,
-      "term": "D",
-      "definition": "To express the user task descriptions, which representation technique is NOT suitable?\n\nA. Scenarios\n\nB. User stories\n\nC. Use case specifications\n\nD. Storyboards",
+      "id": 13383529386,
+      "term": "A",
+      "definition": "We can use ... and ... methods to ensure that application-level variables are not updated by more than one user simultaneously. \n[A] Block and Unblock\n[B] Lock and Unlock \n[C] Server and Session \n[D] Lock and Key",
       "image": null,
       "rank": 14
     },
     {
-      "id": 13413744841,
-      "term": "B",
-      "definition": "Which of the following is most true about a non-functional requirement?\n\nA. Describes functions software is to execute\n\nB. Acts to constrain the software solution\n\nC. Is highly sensitive to the system architecture\n\nD. Is derived from hardware requirements",
+      "id": 13383529387,
+      "term": "D",
+      "definition": "Which of the following statements is true? \n[A] A class is the implementation of an objec t \n[B] A class is the instantiation of an objec t \n[C] An object is the implementation of a class. \n[D] An object is the instantiation of a class.",
       "image": null,
       "rank": 15
     },
     {
-      "id": 13413744842,
-      "term": "C",
-      "definition": "To understand user tasks and goals and the business objectives with which those tasks align, the Business Analysis should discuss with users at which stage(s):\n\nA. Analysis\n\nB. Specification\n\nC. Elicitation\n\nD. Validation",
+      "id": 13383529388,
+      "term": "B",
+      "definition": "What of the folllowings is correct if we want to set the AChild form as a child form of the parent form named TheParent\nA. AChild.MdiChild = TheParent\nB. AChild.MdiParent = TheParent\nC. TheParent.AChild = true\nD. TheParent.MdiChild = AChild\nE. AChild.TheParent = true",
       "image": null,
       "rank": 16
     },
     {
-      "id": 13413744843,
-      "term": "A",
-      "definition": "Requirement baselines are:\n\nA. Requirements committed to be implemented\n\nB. Requirements committed to be tested\n\nC. Requirements within scope\n\nD. Requirements out of scope",
+      "id": 13383529389,
+      "term": "C",
+      "definition": "The ____ event of the Form control is used to perform tasks such as allocating resources used by the form\n[A] Allocate\n[B] Activate\n[C] Load\n[D] Activated",
       "image": null,
       "rank": 17
     },
     {
-      "id": 13413744845,
-      "term": "E",
-      "definition": "Which adverbs are the causes of requirements ambiguity in documenting Software Requirement Specification?\n\nA. reasonably\n\nB. generally\n\nC. usually\n\nD. appropriately\n\nE. All of the mentioned\n\nF. approximately",
+      "id": 13383529390,
+      "term": "B",
+      "definition": "Which of the following information is NOT included in a strong name of a .NET assembly?\nA. The version number of the Assembly\nB. External assemblies of the assembly\nC. The public key value\nD. The friendly name of the Assembly",
       "image": null,
       "rank": 18
     },
     {
-      "id": 13413744846,
-      "term": "B",
-      "definition": "The voice of the customers may be derived from?\n\nA. Impact analysis\n\nB. Customer complaints\n\nC. Business rules\n\nD. The business case",
+      "id": 13383529391,
+      "term": "D",
+      "definition": "A command builder is only able to autogenerate SQL commands for use by a data adapter, if\nA. The SELECT command interacts with only a single table and the single table has been attributed with a primary key.\nB. The SELECT command interacts with only a single table.\nC. .NET does not support to autogenerate SQL commands.\nD. The SELECT command interacts with only asingle table, the single table has been attributed with a primary key, and the column(s) representing the primary key is accounted for in your SQL statement.",
       "image": null,
       "rank": 19
     },
     {
-      "id": 13413744847,
-      "term": "C",
-      "definition": "Why is Requirements Management important? It is due to the changes\n\nA. in technology\n\nB. in customer's expectations\n\nC. all ofthe mentioned\n\nD. to the environment\n\nE. in the demand of stakeholders",
+      "id": 13383529392,
+      "term": "D",
+      "definition": "Override method ______\nA. Is declared with virtual key word\nB. Is a method is overridden by an override declaration\nC. Is an instance method declaration includes an override modifier\nD. Has different declared accessibility with overridden base method",
       "image": null,
       "rank": 20
     },
     {
-      "id": 13413744848,
-      "term": "B",
-      "definition": "Which technique overtaps for use in requirements elicitation and requirements validation?\n\nA. Facilitator meetings\n\nB. Prototypes\n\nC. Observations\n\nD. Interviews",
+      "id": 13383529393,
+      "term": "D",
+      "definition": "In which case should we use of client-side scripting?\nA. To validate user input before posting back to the web server\nB. To display data from database\nC. To insert a new record into database\nD. To calculate a complex algorithms",
       "image": null,
       "rank": 21
     },
     {
-      "id": 13413744849,
-      "term": "C",
-      "definition": "Which requirements should NOT be reused in the scope of cross an enterprise?\n\nA. Business rules\n\nB. Security requirements\n\nC. Constraints\n\nD. Stakeholder profiles",
+      "id": 13383529394,
+      "term": "D",
+      "definition": "What is WSDL?\nA. Is base on HTML\nB. Is executed by client\nC. is executed by web browser\nD. is used to describe information about the web service",
       "image": null,
       "rank": 22
     },
     {
-      "id": 13413744850,
+      "id": 13383529395,
       "term": "A",
-      "definition": "The software requirements specification should NOT be called ___\n\nA. user requirements\n\nB. requirements document\n\nC. system specification\n\nD. product specification\n\nE. a business requirements document (BRD)\n\nF. functional specification",
+      "definition": "Which control is not used to receive information\nA. Label\nB. ListBox\nC. TextBox\nD. ComboBox",
       "image": null,
       "rank": 23
     },
     {
-      "id": 13413744851,
-      "term": "D",
-      "definition": "If a requirements status is proposed then it\n\nA. Is an approved requirement that has been removed\n\nB. Is work complete\n\nC. Has been requested by an authorized source\n\nD. Is a requirement that was proposed, but not planned for implementation",
+      "id": 13383529396,
+      "term": "B",
+      "definition": "What is name of templates that wrap a block of selected statements within a relevant scope?\na. Snippets\nb. Surround With\nc. Console Application\nd. Class Library",
       "image": null,
       "rank": 24
     },
     {
-      "id": 13413744852,
-      "term": "B",
-      "definition": "Which of the following you should be based on when you estimate the projectsize and effort?\n\nA. Function points (Jones 1996b;IFPUG 2010)\n\nB. All of the mentioned answers\n\nC. The number, type, and complexity of user interface elements\n\nD. Story points (Cohn 2005;McConnell 2006) or use case points (Wiegers 2006)\n\nE. Estimated lines of code needed to implement specific requirements\n\nF. The number of individually testable requirements (Wilson 1995)",
+      "id": 13383529397,
+      "term": "A",
+      "definition": "How many interfaces a class can implement?\na. Many.\nb. Only one.\nc. A class cannot implement any interfaces.",
       "image": null,
       "rank": 25
     },
     {
-      "id": 13413744853,
-      "term": "C",
-      "definition": "Due to the iterative nature of the requirements process, change has to be managed through the review and approval process. Which of the following is likely to require the least amount of management?\n\nA. Requirements tracing\n\nB. Impact analysis\n\nC. System definition\n\nD. Software configuration management",
+      "id": 13383529398,
+      "term": "B",
+      "definition": "how do you create a permanent cookie? \nA. We cannot create a permanent cookie?\nB. By setting the expiry date of the cookie to a later time",
       "image": null,
       "rank": 26
     },
     {
-      "id": 13413744854,
-      "term": "C",
-      "definition": "In order to determine solutions to business problems, the business analyst applies a set of:\n\nA. Inputs and outputs\n\nB. Practices and processes\n\nC. Tasks and techniques\n\nD. Activities and tasks",
+      "id": 13383529399,
+      "term": "B",
+      "definition": "Which type of the System. Threading namespace can be used to resolve the issue of concurrency? \n[A] Timer \n[B] Monitor\n[C] Thread \n[D] ThreadPool",
       "image": null,
       "rank": 27
     },
     {
-      "id": 13413744860,
-      "term": "B",
-      "definition": "In the V model, the user requirements are detected by\n\nA. Unittesting\n\nB. Acceptance testing\n\nC. Integration testing\n\nD. System testing",
+      "id": 13383529400,
+      "term": "A",
+      "definition": "By default can we delete a folder that contains subdirectories and files? \n[A] No\n[B] Yes",
       "image": null,
       "rank": 28
     },
     {
-      "id": 13413744861,
+      "id": 13383529401,
       "term": "B",
-      "definition": "Which is the benefits of the reuse requirements technique?\n\nA. to estimate implementation effort if you have data available from implementing the same requirements on a previous project.\n\nB. All of the mentioned answers\n\nC. improve functional consistency across related members of a product line or among a set of business applications\n\nD. Faster delivery, lower development costs, consistency both within and across applications, higher team productivity, fewer defects, and reduced rework.\n\nE. save review time, accelerate the approval cycle, and speed up other project activities, such as testing",
+      "definition": "what is the first step to define an event\nA. Declare an event using the C# event key\nB. Define a delegate that contains the method to be called when the event is fired \nC. Define a method that is called when the event is fired \nD. Declare an event in term of the related delegate",
       "image": null,
       "rank": 29
     },
     {
-      "id": 13413744862,
-      "term": "A",
-      "definition": "The system users have stated their needs for revised online order entry system capabilities.\nHer team needs the ability to perform online, remote order entry when they are traveling\nworldwide. What class or type of requirements best describe this need?\n\nA. Functional requirements\n\nB. Business requirements\n\nC. User requirements\n\nD. Transition requirements",
+      "id": 13383529402,
+      "term": "B",
+      "definition": "____are the visual effects supported in WinForms Application\nA. Control Anchoring,Class Libraries,Transparent Forms\nB. Control Anchoring,Cotrol Docking,Transparent Forms\nC. Control Anchoring,Cotrol Docking,Class Libraries\nD. Transparent Forms,Cotrol Docking,Class Libraries",
       "image": null,
       "rank": 30
     },
     {
-      "id": 13413744863,
-      "term": "C",
-      "definition": "Which is NOT the advantage of Agile methods?\n\nA. adapt with the requirements changes of stakeholders\n\nB. modify what already exists, enrich the initial features, add new ones, and correct defects that were discovered\n\nC. puts considerable effort into trying to get the full requirements set 'iight\" early on.\n\nD. the development team could add a small set of functionalities based on priorities established by the customer\n\nE. breaking the development of software into short cycles",
+      "id": 13383529403,
+      "term": "A",
+      "definition": "can you store object different date types in an arrayList?\nA.yes\nB.No",
       "image": null,
       "rank": 31
     },
     {
-      "id": 13413744865,
-      "term": "B",
-      "definition": "Which requirements should NOT be reused within an operating environment or platform?\n\nA. Infrastructures of functionality needed to support certain types of requirements (such as a report generator)\n\nB. stakeholder profiles\n\nC. Constraints\n\nD. Interfaces",
+      "id": 13383529404,
+      "term": "A",
+      "definition": "which sentence about background threads is correct?\n\n[A] Background threads are viewed by the CLR as expendable paths of execution that can be ignored at any point in time.\n[B] Background threads have the ability to prevent the current application from terminating. \n[C] You cannot create any background threads. \n[D] By default every thread that is created via the Thread Start() method is automatically a background thread",
       "image": null,
       "rank": 32
     },
     {
-      "id": 13413744866,
-      "term": "B",
-      "definition": "Which is NOT a purpose ofthe software prototype technique?\n\nA. Clarify, complete, and validate requirements\n\nB. Specific technologies, tools, languages, and databases that must be used or avoided\n\nC. Create a subset that will grow into the ultimate product\n\nD. Explore design alternatives",
+      "id": 13383529405,
+      "term": "A",
+      "definition": "nt[] myArray = new int[10]; What will be the value of myArray[1]?\na. 0\nb. Nullc. 10\nd. A null reference exception would be thrown unless myArray[1] is first\ninitialized to a value",
       "image": null,
       "rank": 33
     },
     {
-      "id": 13413744867,
+      "id": 13383529406,
       "term": "B",
-      "definition": "Why is base-lining project?\n\nA. To get disagreement for all the requirements of project\n\nB. To get an agreement for each set of requirements after the team implements them\n\nC. To minimize miscommunication and unnecessary rework\n\nD. To get an agreement for all the requirements of project",
+      "definition": "What is the TrackBar control? \n\n[A] The TrackBar control allows user to select to choose an item from a range of possible selections, using a pair of small up and down arrows \n[B] The TrackBar control allows user to select a value from a range (of values), using scroll bar-like input mechanism.\n[C] The TrackBar control allows user to input a string value. \n[D] The TrackBar control allows user to select a range of dates using a friendly Ul",
       "image": null,
       "rank": 34
     },
     {
-      "id": 13413744868,
-      "term": "D",
-      "definition": "The business analysis team has put together the elicitation results documenting their\nunderstanding of the user needs. What types of requirements have they developed at this\npoint in time?\n\nA. Maintained and reusable\n\nB. Communicated and confirmed\n\nC. Stated and unconfirmed\n\nD. Validated and confirmed",
+      "id": 13383529407,
+      "term": "B",
+      "definition": "A(An)________ type can be used only by the assembly in which it is defined\nA.private\nB.internal\nC.public\nD.seal",
       "image": null,
       "rank": 35
     },
     {
-      "id": 13413744870,
-      "term": "E",
-      "definition": "A listed acceptance criteria to fulfil certain requirements of a user and normally written from the perspective of an end~user. This is a\n\nA. product backlog\n\nB. task\n\nC. requirement\n\nD. release\n\nE. user story\n\nF. time box",
+      "id": 13383529408,
+      "term": "A",
+      "definition": "Which sentence is correct?\nA. CLR is the entity in charge of resolving the location of an assembly.\nB. CLR does not layout the type in memory.\nC. CLR does not compile the associated CIL into platform-specific instructions.\nD. CLR does not perform any necessary security checks.",
       "image": null,
       "rank": 36
     },
     {
-      "id": 13413744872,
-      "term": "E",
-      "definition": "Why is Requirements Management important? It is due to the changes\n\nA. lotheenvironment\n\nB. intechnology\n\nC. in customers expectations\n\nD. in the demand of stakeholders\n\nE. All of the mentioned",
+      "id": 13383529409,
+      "term": "C",
+      "definition": "Which sentence about .NET assemblies is correct?\nA. .Net assemblies configurable, self-describing, but not versioning\nB. .Net assemblies not configurable, self-describing, versioning\nC. .Net assemblies configurable, self-describing, versioning\nD. .Net assemblies configurable,not self-describing,versioning",
       "image": null,
       "rank": 37
     },
     {
-      "id": 13413744873,
+      "id": 13383529410,
       "term": "D",
-      "definition": "The use of traceability tables helps to _\n\nA. minimize miscommunication and unnecessary rework\n\nB. determine the performance of algorithm implementations\nC. debug programs following the detection of runtime errors\nD. identify, control and track requirements changes",
+      "definition": "What is method of form to transmit the form data back to web server for processing? (Choose 2)\n[A] Get and Postback\n[B] Postback and Receive\n[C] Receive and Post\n[D] Post and Get",
       "image": null,
       "rank": 38
     },
     {
-      "id": 13413744874,
+      "id": 13383529411,
       "term": "D",
-      "definition": "What is a best practice for change control?\n\nA. Submit multiple changes at one time\n\nB. Open and honest communication\n\nC. Give overviews of the changes\n\nD. Hold change meetings",
+      "definition": "A .Net a programming language (C#, VB.NET, J# etc.) does not compile into executable code; instead it complies into an intermediate code called _______\nA. VB#\nB. C#\nC. Java#\nD. MSIL",
       "image": null,
       "rank": 39
     },
     {
-      "id": 13413744875,
+      "id": 13383529412,
       "term": "A",
-      "definition": "Which of the following property is least critical to the interaction between process actors and the requirements process?\n\nA. The education of the actor\n\nB. The nature of their 'stake' in the process\n\nC. The requirements they elicit\n\nD. Process actor identification",
+      "definition": "Which of the following associations of try, catch and finally is INVALID?\nA.catch {} finally {} \nB. try {} finally {}\nC.try {} catch {} finally \nD. try {} catch {}",
       "image": null,
       "rank": 40
     },
     {
-      "id": 13413744876,
+      "id": 13383529413,
       "term": "A",
-      "definition": "Which is NOT the reuse barrier?\n\nA. Organizational culture\n\nB. Inconsistent organization\n\nC. Writing style\n\nD. Ownership\n\nE. Projecttype",
+      "definition": "When a *.dll or an *.exe has been created using a .NET-aware compiler, the resulting module is bundled into an _______\nA. assembly\nB. manifest\nC. meta-data\nD. None of the others",
       "image": null,
       "rank": 41
     },
     {
-      "id": 13413744877,
-      "term": "A",
-      "definition": "Which is NOT the type of requirements development tools?\n\nA Requirement Management tools\n\nB. Elicitation tools\n\nC. Modeling tools\n\nD. Prototyping tools",
+      "id": 13383529414,
+      "term": "C",
+      "definition": "You want to add a control to your form that allows you to set a particular option on or off. Which control would you choose? \n[A] Button \n[B] ListBox\n[C] CheckBox\n[D] CheckedListBox",
       "image": null,
       "rank": 42
     },
     {
-      "id": 13413744878,
+      "id": 13383529415,
       "term": "C",
-      "definition": "Giving a statement in an Airport check-in kiosk application: \"As a traveler. I want to check in for a flight so that I can fly to my destination\". This is a(n)_ example\n\nA. actor\n\nB. usecase\n\nC. user story\n\nD. entity",
+      "definition": "Which of the following are the correct ways to declare a delegate for calling the function func() defined in the sample class given below?\nclass Sample\n{\n public int func(int i, Single j)\n {\n /* Add code here. */\n }\n}\nA. delegate d(int i, Single j);\nB. delegate void d(int, Single);\nC. delegate int d(int i, Single j);\nD. delegate void (int i, Single j);\nE. delegate int sample.func(int i, Single j);",
       "image": null,
       "rank": 43
     },
     {
-      "id": 13413744879,
-      "term": "C",
-      "definition": "The work products produced during requirement elicitation will vary depending on the _\n\nA. Stakehotders needs\n\nB. software process being used\n\nC. size of the product being built\n\nD. size of the budget",
+      "id": 13383529416,
+      "term": "A",
+      "definition": "Which sentence about Connection object is correct?\nA. Connection object is used to establish a session with the data source.\nB. Connection object is used to execute a SQL command.\nC. Connection object is used to obtain information from a data source.",
       "image": null,
       "rank": 44
     },
     {
-      "id": 13413744880,
+      "id": 13383529417,
       "term": "D",
-      "definition": "What is considered the traditional means or requirements elicitation?\n\nA. Scenarios\n\nB. Observations\n\nC. Prototypes\n\nD. Interviews",
+      "definition": "________property is used to get or set the data source that the gridview is displaying data for.\nA. DataSet\nB. DataMember\nC. DataSender\nD. DataSource\nE. DataSrc",
       "image": null,
       "rank": 45
-    },
-    {
-      "id": 13413744881,
-      "term": "A",
-      "definition": "____ is the process of examining a project to identify potential threats\n\nA. Risk assessment\n\nB. Risk resolution\n\nC. Risk monitoring\n\n0. Risk avoidance\n\nE. Risk control",
-      "image": null,
-      "rank": 46
-    },
-    {
-      "id": 13413744882,
-      "term": "F",
-      "definition": "Which is NOT belong to the case of use case traps?\n\nA. Including data definitions in the use cases\n\nB. Including design in the use cases\n\nC. Highly complex use cases\n\nD. Use cases that users don't understand\n\nE. Too many use cases\n\nF. Depicts detail the use case story",
-      "image": null,
-      "rank": 47
-    },
-    {
-      "id": 13413744883,
-      "term": "B",
-      "definition": "The requirements engineering process is _\n\nA. The same for each organization and process\n\nB. lnitiated at the beginning of a project and continues to be refined throughout the lifecycle.\n\nC. A discrete fmntend activity of the software life cycle.\n\nD. A continuous process that ends when requirements are specified and documented",
-      "image": null,
-      "rank": 48
-    },
-    {
-      "id": 13413744884,
-      "term": "C",
-      "definition": "A throwaway prototype is most appropriate when:\n\nA. Users need to judge whether the requirements will enable the necessary business processes\nB. Have difficulty envisioning the system from the requirements alone\n\nC. all of the mentioned\n\nD. the team faces uncertainty. ambiguity. incompleteness. or vagueness in the requirements\n\nE. The gaps between customers and developers in the requirements",
-      "image": null,
-      "rank": 49
-    },
-    {
-      "id": 13413744888,
-      "term": "D",
-      "definition": "Process quality and improvement relies most on which of the following?\n\nA. Product operator performance\n\nB. Human factors\n\nC. Customer preferences\n\nD. Requirements process measures",
-      "image": null,
-      "rank": 50
-    },
-    {
-      "id": 13413744889,
-      "term": "D",
-      "definition": "Which is (are) the skills of business analyst on Agile project?\n\nA. Understanifing of the business area that the project is involved with\n\nB. Understanding of the agile development process\n\nC. Ability to document requirements formally or informally demnding on the need of the project\n\nD) All of the mentioned\n\nE. Ability to facilitate a team to consensus on scope. design decisions. and implementation decisions",
-      "image": null,
-      "rank": 51
-    },
-    {
-      "id": 13413744890,
-      "term": "D",
-      "definition": "Software Requirement Specification (SRS) is also known as specification of\n\nA. White box testing\n\nB. Black boxtesting\n\nC. lntegrated testing\n\nD. Acceptance testing",
-      "image": null,
-      "rank": 52
-    },
-    {
-      "id": 13413744892,
-      "term": "C",
-      "definition": "Giving a condition example in specification of withdrawn money use case: \"the ATM has dispensed money and printed a receipt'. This is a(n)\n\nA. exception\n\nB. precondition\n\nC. postcondition\n\nD. extension",
-      "image": null,
-      "rank": 53
-    },
-    {
-      "id": 13413744894,
-      "term": "D",
-      "definition": "Which dimension of requirement classification is critical for consideration of tolerant design?\n\nA. Whether the requirement is functional or non-functional.\n\nB. Whether the requirement is a high or low priority.\n\nC. Whether the requirement is on the product or process.\n\nD. Whether the requirement is volatile or stable.",
-      "image": null,
-      "rank": 54
-    },
-    {
-      "id": 13413744897,
-      "term": "D",
-      "definition": "Which is NOT the type of internal quality?\n\nA. Verifiability\n\nB. Modifiability\n\nC. Efficiency\n\nD. availability\n\nE. Scalability",
-      "image": null,
-      "rank": 55
-    },
-    {
-      "id": 13413744898,
-      "term": "AD",
-      "definition": "Select the true statements (two options)-\n\nA. Verification determines whether the product of some development activity meets its requirements (doing the thing right).\n\nB. Validation determines whether the product of some development activity meets its requirements (doing the right thing)\n\nC. Verification assesses whether a product satisfies customer needs (doing the thing right).\n\nD. Validation assesses whether a product satisfies customer needs (doing the right thing)",
-      "image": null,
-      "rank": 56
-    },
-    {
-      "id": 13413744899,
-      "term": "B",
-      "definition": "Giving a business rule\" All website images must include alternative text to be used by electronic reading devices to meet accessibility requirements for visually impaired users.' This is a type of _rule.\n\nA. inferences\n\nB. constraint\n\nC. facts\n\nD. action enabler\n\nE. computation",
-      "image": null,
-      "rank": 57
-    },
-    {
-      "id": 13413744900,
-      "term": "C",
-      "definition": "To understand user tasks and goals and the business objectives with which those tasks align. the Business Analysis should discuss with users at which stage(s)'\n\nA. Validation\n\nB. Specification\n\nC. Elicitation\n\nD. Analysis",
-      "image": null,
-      "rank": 58
-    },
-    {
-      "id": 13413744901,
-      "term": "D",
-      "definition": "Portability is an intemal quality attribute which could be described:\n\nA. How well the system protects against unauthorized access to the application and its data\n\nB. How quickly and predictably the system responds to user inputs or other events\n\nC. How easy it is for people to learn. remember. and use the system\n\nD. How easily the system can be made to work in other operating environments",
-      "image": null,
-      "rank": 59
-    },
-    {
-      "id": 13413744905,
-      "term": "D",
-      "definition": "Giving an example of quality requirements: 'After performing a file backup. the system shall verify the backup copy against the original and report any discrepancies'. This is a (an)—\n\nA. performance requirement\n\nB. interoperability requirement\n\nC. Robustness requirement\n\nD. Integrity requirement",
-      "image": null,
-      "rank": 60
-    },
-    {
-      "id": 13413744906,
-      "term": "D",
-      "definition": "The requirement passed its tests after integration into the product. this is status\n\nA. approved\n\nB. implemented\n\nC. rejected\n\nD. verified\n\nE. deferred\n\nF. deleted",
-      "image": null,
-      "rank": 61
-    },
-    {
-      "id": 13413744907,
-      "term": "A",
-      "definition": "Which of the following is NOT a type of software requirement?\n\nA. Complexity\n\nB. Performance\n\nC. Functionality\n\nD. External Interface",
-      "image": null,
-      "rank": 62
-    },
-    {
-      "id": 13413744908,
-      "term": "B",
-      "definition": "Why is base-lining project?\n\nA. To minimize miscommunication and unnecessary rework\n\nB. To get an agreement for each set of requirements after the team implements them\n\nC. To get disagreement for all the requirements of project\n\nD. To get an agreement for all the requirements of project",
-      "image": null,
-      "rank": 63
-    },
-    {
-      "id": 13413744909,
-      "term": "D",
-      "definition": "Product requirement validation occurs primarily after\n\nA. Testing\n\nB. Analysis\n\nC. Elicitation\n\nD. Specification",
-      "image": null,
-      "rank": 64
-    },
-    {
-      "id": 13413744910,
-      "term": "F",
-      "definition": "Which adverbs are the causes of requirements ambiguity in documenting Software Requirement Specification?\n\nA. appropriately\n\nB. generally\n\nC. reasonably\n\nD. usually\n\nE. approximately\n\nF. all of the mentioned",
-      "image": null,
-      "rank": 65
-    },
-    {
-      "id": 13413744912,
-      "term": "D",
-      "definition": "The BEST way to conduct a requirements validation review is to _\n\nA. examine the system model for errors\n\nB. have the customer look over the requirements\n\nC. send them to the design team and see if they have any concems\n\nD. use a checklist of questions to examine each requirement",
-      "image": null,
-      "rank": 66
-    },
-    {
-      "id": 13413744913,
-      "term": "B",
-      "definition": "Classifying users should not base on:\n\nA. The tasks user perform during their business operations\n\nB. The knowledge user have\n\nC. User's access privilege or security levels (such as ordinary user. guest user. administrator)\n\nD. User's native language\n\nE. The features user use\n\nF. The frequency with which user use the product",
-      "image": null,
-      "rank": 67
-    },
-    {
-      "id": 13413744914,
-      "term": "A",
-      "definition": "Which of these steps in the planned change process puts the change plan into action?\n\nA. Implement the change\n\nB. Select the change agent\n\nC. Develop the change plan\n\nD. Recognize the need for change",
-      "image": null,
-      "rank": 68
-    },
-    {
-      "id": 13413744916,
-      "term": "F",
-      "definition": "Which are the processes in requirements engineering?\n\nA. Elicitation\n\nB. Specification\n\nC. Analysis\n\nD. Validation\n\nE. Requirements management\n\nF. All of the mentioned",
-      "image": null,
-      "rank": 69
-    },
-    {
-      "id": 13413744917,
-      "term": "C",
-      "definition": "Due to the iterative nature of the requirements process. change has to be managed through the review and approval process. Which of the following is likely to require the least amount of management?\n\nA. Requirements tracing\n\nB. Impact analysis\n\nC. System definition\n\nD. Software configuration management",
-      "image": null,
-      "rank": 70
-    },
-    {
-      "id": 13413744918,
-      "term": "C",
-      "definition": "Which is NOT describe the correct purpose of requirements elicitation?\n\nA. Collect, discover. extract. and define requirements\n\nB. Discover business. user. functional. and nonfunctional requirements. along with other types of information\n\nC. Collect. discover. extract. and define exactly what are the outputs of project.\n\nD. Identify the needs and constraints of the various stakeholders for a software system.",
-      "image": null,
-      "rank": 71
-    },
-    {
-      "id": 13419028325,
-      "term": "AC",
-      "definition": "The important goals of writing requirement:\n\nA. Each reader's interpretation matches what the author intended to communicate\n\nB. Each implementation of readers matches what the author intended to communicate\n\nC. Anyone who reads the requirement comes to the same interpretation as any other reader\n\nD. None of the answers",
-      "image": null,
-      "rank": 72
-    },
-    {
-      "id": 13419029896,
-      "term": "A",
-      "definition": "If a requirements status is proposed then it:\n\nA. Is an approved requirement that has been removed\n\nB. Is work complete\n\nC. Has been requested by an authorized source\n\nD. Is 4 requirement that was proposed. but not planned for implementation",
-      "image": null,
-      "rank": 73
-    },
-    {
-      "id": 13425154846,
-      "term": "B",
-      "definition": "According to the SWEBOK Guide, what are the four major activities of the requirements engineering process?\n\nA. Identification, specification, construction, and testing\n\nB. Elicitation, analysis, specification, and validation \n\nC. Analysis, planning, construction, and verification\n\nD. Elicitation, planning, construction, and testing",
-      "image": null,
-      "rank": 74
-    },
-    {
-      "id": 13425171976,
-      "term": "B",
-      "definition": "What is the most common type of scenario elicitation technique?\n\nA. The prototype \n\nB. The use case\n\nC. The facilitator meeting \n\nD. Observation",
-      "image": null,
-      "rank": 75
-    },
-    {
-      "id": 13425185454,
-      "term": "D",
-      "definition": "A concept of operations document (ConOps) should not be written\n\nA. In the user's language using the user's format\n\nB. Mostly in narrative prose\n\nC. With visual forms\n\nD. Primarily in the developers technical language",
-      "image": null,
-      "rank": 76
-    },
-    {
-      "id": 13425844163,
-      "term": "C",
-      "definition": "Which of the following requirement properties would be considered an emergent property of a software program?\n\nA. The fault detection system of the software\n\nB. The programming language of the system\n\nC. The reliability of the software\n\nD. The number of lines of code",
-      "image": null,
-      "rank": 77
-    },
-    {
-      "id": 13425884561,
-      "term": "A",
-      "definition": "In the IEEE Std 1362 Concept of Operations (ConOps) Document, which of the following is fundamentally not included under the Concepts for the Proposed System (Clause 5)?\n\nA. Proposed design method of system \n\nB. Operational policies and constraints \n\nC. Description of the proposed system \n\nD. Modes of operation",
-      "image": null,
-      "rank": 78
-    },
-    {
-      "id": 13425887651,
-      "term": "B",
-      "definition": "In the IEEE Std 1362 Concept of Operations (ConOps) Document, which of the following is fundamentally not included in the document?\n\nA. Current system or situation \nB. Proposed design method of system \nC. Justification for the nature of the change \nD. Operational scenarios",
-      "image": null,
-      "rank": 79
-    },
-    {
-      "id": 13425892298,
-      "term": "A",
-      "definition": "What is the most important attribute of a requirement?\n\nA. Identifier \n\nB. Source \n\nC. Verification procedure \n\nD. Priority",
-      "image": null,
-      "rank": 80
-    },
-    {
-      "id": 13425906641,
-      "term": "A",
-      "definition": "What does allocation try to satisfy in the assigning of responsibility to components? \n\nA. Requirements \n\nB. Validation \n\nC. External interfaces \n\nD. Testing",
-      "image": null,
-      "rank": 81
-    },
-    {
-      "id": 13425915868,
-      "term": "B",
-      "definition": "What is a software engineer most likely to resolve by making a unilateral decision? \n\nA. Differences between incompatible features \n\nB. Differences between developer perception and developer reality \n\nC. Differences between requirements and resources\n\nD. Differences between functional and non-functional requirements",
-      "image": null,
-      "rank": 82
-    },
-    {
-      "id": 13425918478,
-      "term": "B",
-      "definition": "Which document is used to derive the software requirements specification? \n\nA. The System Definition Document\n\nB. System Requirements Specification \n\nC. IEEE 1362 Concept of Operations \n\nD. IEEE 1016 Software Design Descriptions",
-      "image": null,
-      "rank": 83
-    },
-    {
-      "id": 13425921692,
-      "term": "D",
-      "definition": "What should the software requirements specification (SRS) writer avoid placing in the SRS environment of the SRS?\n\nA. External interfaces \n\nB. Performance or functionality\n\nC. Attributes or classification\n\nD. Either design or project requirements",
-      "image": null,
-      "rank": 84
-    },
-    {
-      "id": 13425924813,
-      "term": "B",
-      "definition": "Which of the following is not embedded design that would be written in the SRS?\n\nA. Partitioning of software into modules \n\nB. Specify logical requirements for the software\n\nC. Describe the flow of information or control between modules\n\nD. Choose data structures",
-      "image": null,
-      "rank": 85
-    },
-    {
-      "id": 13425937230,
-      "term": "C",
-      "definition": "Which of the following phrases most closely approaches verifiable language?\n\nA. \"A good operability\"\n\nB. \"Well enough\" \n\nC. \"According to Standard X\" \n\nD. \"Usually acceptable\"",
-      "image": null,
-      "rank": 86
-    },
-    {
-      "id": 13425940878,
-      "term": "B",
-      "definition": "Software requirements validation should be viewed by whom and how often?\n\nA. Requirements analysts, often\n\nB. Stakeholders, often\n\nC. Customers, never\n\nD. Users, never",
-      "image": null,
-      "rank": 87
-    },
-    {
-      "id": 13425947589,
-      "term": "A",
-      "definition": "Requirements reviews: \nCan not be done before completion of the\n\nA. Systems definition document \n\nB. Systems specification document \n\nC. Software requirements specification document \n\nD. Baseline specification for new release",
-      "image": null,
-      "rank": 88
-    },
-    {
-      "id": 13425980615,
-      "term": "C",
-      "definition": "Which of the following is the technical manager not responsible for?\n\nA. Determining the adequacy of the requirements specifications. \n\nB. Controlling the volatility of the requirements and manage change history. \n\nC. Re-estimating the cost and schedule of the project when the requirements change. \n\nD. Negotiating requirements changes between the acquirer (customer) and the developer.",
-      "image": null,
-      "rank": 89
-    },
-    {
-      "id": 13425987326,
-      "term": "A",
-      "definition": "Requirements tracing is most likely concerned with the following: \nRecovering the source of requirements from: \n\nA. Software requirement back to the system requirement it supports \n\nB. Observation to elicitation technique\n\nC. Analysis into requirements specification document\n\nD. Software requirement to validation test",
-      "image": null,
-      "rank": 90
     }
   ]
 }
-
-export default data

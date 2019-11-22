@@ -14,14 +14,15 @@
     </b-row>
     <div class="mb-2 f-body">
       <f-tabs />
-      <f-content class="f-box" />
+      <f-content class="f-box" :selected="selected" />
     </div>
     <div class="f-footer">
       <f-question
         v-for="n in sets.length"
         :key="n"
         :number="n"
-        :completed="n%2===0 ? true : false"
+        :completed="sets[n - 1].choose !== null ? true : false"
+        @handleSelected="handleSelected"
       />
       <br />
       <f-checkbox />
@@ -50,13 +51,18 @@ export default {
     FContent,
     FQuestion
   },
+  data() {
+    return {
+      selected: 1
+    };
+  },
   asyncData({ store }) {
     const { created_by, title, terms, id } = data;
 
     const sets = terms.map(item => {
       if (item.definition.length >= item.term.length) {
-        item.question = item.definition;
-        item.answer = item.term;
+        item.question = item.definition.trim();
+        item.answer = item.term.trim();
         delete item.definition;
         delete item.term;
       } else {
@@ -66,8 +72,8 @@ export default {
         delete item.term;
       }
 
-      item.choose = "";
-      item.number_question = item.question.split("\n\n").length - 1;
+      item.choose = null;
+      item.number_question = item.question.split("\n").length - 1;
       return item;
     });
 
@@ -79,6 +85,11 @@ export default {
     return {
       sets: sets
     };
+  },
+  methods: {
+    handleSelected(n) {
+      this.selected = n;
+    }
   }
 };
 </script>

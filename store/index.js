@@ -35,7 +35,7 @@ const store = () => new Vuex.Store({
   },
   getters: {
     sets(state) {
-      return state.set
+      return state.sets
     },
     server(state) {
       return state.server

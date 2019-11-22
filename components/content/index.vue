@@ -2,32 +2,38 @@
   <div class="f-wrap-content d-flex">
     <div class="f-left">
       <p class="f-answer mt-4">Answer</p>
-      <f-answer label="A" />
-      <f-answer label="B" />
-      <f-answer label="C" />
-      <f-answer label="D" />
+      <f-answer v-for="n in sets[selected - 1].number_question" :key="n" :label="answers[n - 1]" />
     </div>
     <div class="f-right">
-      <p class="f-title">Multiple choices 49/50</p>
+      <p class="f-title">Multiple choices {{ selected }}/50</p>
       <div class="f-content">
         <p>(Choose 1 answer)</p>
-        <span class="f-term" v-html="text" />
+        <span class="f-term" v-html="sets[selected - 1].question" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import FAnswer from "./answer";
 export default {
+  props: {
+    selected: {
+      type: Number,
+      default: 1
+    }
+  },
   components: {
     FAnswer
   },
   data() {
     return {
-      text:
-        "In the IEEE Std 1362 Concept of Operations (ConOps) Document, which of the following is fundamentally not included in the document?\n\nA. Current system or situation \nB. Proposed design method of system \nC. Justification for the nature of the change \nD. Operational scenarios"
+      answers: ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
     };
+  },
+  computed: {
+    ...mapGetters(["sets"])
   }
 };
 </script>

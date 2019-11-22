@@ -4,6 +4,7 @@
     type="button"
     :value="number"
     :class="completed === true ? 'f-completed': ''"
+    @click="handleSelected"
   />
 </template>
 
@@ -17,6 +18,11 @@ export default {
     completed: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    handleSelected() {
+      this.$emit("handleSelected", this.number);
     }
   }
 };
