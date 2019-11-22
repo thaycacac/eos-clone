@@ -1,7 +1,7 @@
 <template>
   <label class="f-container">
     {{ label }}
-    <input type="checkbox" v-model="check" :value="label" @click="handleChoose" />
+    <input type="checkbox" :checked="check" :value="label" @click="handleChoose" />
     <span class="f-checkmark"></span>
   </label>
 </template>
@@ -19,13 +19,11 @@ export default {
       default: 1
     }
   },
-  data() {
-    return {
-      check: this.sets[this.selected - 1].choose.includes(this.label)
-    };
-  },
   computed: {
-    ...mapGetters(["sets"])
+    ...mapGetters(["sets"]),
+    check: function() {
+      return this.sets[this.selected - 1].choose.includes(this.label);
+    }
   },
   methods: {
     handleChoose() {
