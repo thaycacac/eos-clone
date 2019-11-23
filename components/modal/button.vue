@@ -2,10 +2,12 @@
   <button
     class="f-button"
     :style="focus ? 'border: #0476e8 2px solid;' : 'border: #aeacaf 1px solid'"
+    @click="!focus && addShowModal(false)"
   >{{ value }}</button>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   props: {
     focus: {
@@ -16,7 +18,8 @@ export default {
       type: String,
       default: ""
     }
-  }
+  },
+  methods: mapMutations(["addShowModal"])
 };
 </script>
 

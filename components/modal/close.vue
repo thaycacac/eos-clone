@@ -1,6 +1,13 @@
 <template>
-  <button class="f-button">X</button>
+  <button class="f-button" @click="addShowModal(false)">X</button>
 </template>
+
+<script>
+import { mapMutations } from "vuex";
+export default {
+  methods: mapMutations(["addShowModal"])
+};
+</script>
 
 <style lang="scss" scoped>
 .f-button {

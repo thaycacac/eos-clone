@@ -1,5 +1,9 @@
 <template>
-  <div class="f-wrap-modal" id="f-modal">
+  <div
+    class="f-wrap-modal"
+    id="f-modal"
+    :style="!is_show_modal ? 'display: none': 'display: block'"
+  >
     <div class="f-top d-flex justify-content-between" id="f-modal-header">
       <div>
         <img :src="require('@/assets/images/logo.JPG')" alt="logo" />
@@ -57,6 +61,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 import FClose from "./close";
 import FInput from "./input";
 import FButton from "./button";
@@ -66,9 +71,13 @@ export default {
     FInput,
     FButton
   },
+  computed: {
+    ...mapGetters(["is_show_modal"])
+  },
   mounted() {
     this.dragElement(document.getElementById("f-modal"));
   },
+  methods: mapMutations(["addShowModal"]),
   methods: {
     dragElement(elmnt) {
       var pos1 = 0,

@@ -1,12 +1,16 @@
 <template>
-  <div>
-    <input class="f-button" type="button" value="Show Question" />
-    <button
-      onclick="document.getElementById('id01').style.display='block'"
-      class="w3-button w3-black"
-    >Open Modal</button>
-  </div>
+  <input class="f-button" type="button" value="Show Options" @click="addShowModal(!is_show_modal)" />
 </template>
+
+<script>
+import { mapMutations, mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters(["is_show_modal"])
+  },
+  methods: mapMutations(["addShowModal"])
+};
+</script>
 
 <style lang="scss" scoped>
 .f-button {

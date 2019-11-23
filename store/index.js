@@ -9,7 +9,8 @@ const store = () => new Vuex.Store({
     student: '',
     font_size: 15,
     font_family: 'Microsoft Sans Serif',
-    is_finish: false
+    is_finish: false,
+    is_show_modal: false,
   },
   mutations: {
     addSets(state, data) {
@@ -35,6 +36,9 @@ const store = () => new Vuex.Store({
     },
     addFinish(state, data) {
       state.is_finish = data
+    },
+    addShowModal(state, data) {
+      state.is_show_modal = data
     }
   },
   getters: {
@@ -61,6 +65,9 @@ const store = () => new Vuex.Store({
     },
     is_finish(state) {
       return state.is_finish
+    },
+    is_show_modal(state) {
+      return state.is_show_modal
     }
   }
 })
