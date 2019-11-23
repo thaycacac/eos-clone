@@ -12,7 +12,7 @@
         <f-center />
       </b-col>
     </b-row>
-    <div class="mb-2 f-body">
+    <div class="mb-2 f-body-main">
       <f-tabs />
       <f-content class="f-box" :selected="selected" />
     </div>
@@ -103,7 +103,7 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   height: 100vh;
-  .f-body {
+  .f-body-main {
     height: 100%;
     .f-box {
       height: calc(100vh - 321px);

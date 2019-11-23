@@ -1,39 +1,70 @@
 <template>
   <div class="f-wrap-modal" id="f-modal">
-    <div class="f-top d-flex justify-content-between">
+    <div class="f-top d-flex justify-content-between" id="f-modal-header">
       <div>
         <img :src="require('@/assets/images/logo.JPG')" alt="logo" />
         <span class="f-title">EOS Login Form</span>
       </div>
-      <f-button />
+      <f-close />
     </div>
     <div class="f-body">
       <div class="f-date text-right">22.11.2019</div>
-      <table>
-        <tr>
-          <td>Jill</td>
+      <table class="f-table">
+        <tr class="f-row">
+          <td class="f-label">Exam Code:</td>
           <td>
             <f-input />
           </td>
         </tr>
-        <tr>
-          <td>Eve</td>
+        <tr class="f-row">
+          <td class="f-label">User Name:</td>
           <td>
             <f-input />
+          </td>
+        </tr>
+        <tr class="f-row">
+          <td class="f-label">Password:</td>
+          <td>
+            <f-input />
+          </td>
+        </tr>
+        <tr class="f-row">
+          <td class="f-label">Domain:</td>
+          <td>
+            <f-input :disabled="true" value="FE.EDU.VN" />
+          </td>
+        </tr>
+        <tr class="f-row-button">
+          <td></td>
+          <td>
+            <f-button value="Loggin" class="mr-5" />
+            <f-button value="Exit" :focus="false" />
+          </td>
+        </tr>
+        <tr class="f-row-text">
+          <td></td>
+          <td>
+            <span class="f-text mr-4">Check sound (7secs)</span>
+            <span class="f-text">Check font</span>
           </td>
         </tr>
       </table>
+    </div>
+    <div class="f-footer">
+      <span class="f-text-footer">Register the exam may take time, please wait!</span>
     </div>
   </div>
 </template>
 
 <script>
-import FButton from "./button";
+import FClose from "./close";
 import FInput from "./input";
+import FButton from "./button";
 export default {
   components: {
-    FButton,
-    FInput
+    FClose,
+    FInput,
+    FButton
   },
   mounted() {
     this.dragElement(document.getElementById("f-modal"));
@@ -44,10 +75,10 @@ export default {
         pos2 = 0,
         pos3 = 0,
         pos4 = 0;
-      if (document.getElementById(elmnt.id + "header")) {
+      if (document.getElementById(elmnt.id + "-header")) {
         /* if present, the header is where you move the DIV from:*/
         document.getElementById(
-          elmnt.id + "header"
+          elmnt.id + "-header"
         ).onmousedown = dragMouseDown;
       } else {
         /* otherwise, move the DIV from anywhere inside the DIV:*/
@@ -103,15 +134,46 @@ export default {
   .f-top {
     background: white;
     height: 30px;
+    cursor: move;
     .f-title {
       font-size: 13px;
       line-height: 30px;
     }
   }
   .f-body {
-    padding: 7px 20px;
+    padding: 7px 35px 0px 15px;
     .f-date {
       font-size: 13px;
+    }
+    .f-table {
+      width: 100%;
+      .f-row-text {
+        height: 31px;
+        .f-text {
+          color: blue;
+          font-size: 12px;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .f-row-button {
+        height: 31px;
+      }
+      .f-row {
+        height: 43px;
+        .f-label {
+          font-size: 14px;
+          width: 84px;
+          text-align: right;
+        }
+      }
+    }
+  }
+  .f-footer {
+    text-align: center;
+    .f-text-footer {
+      color: red;
+      font-size: 15px;
     }
   }
 }
