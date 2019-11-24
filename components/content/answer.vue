@@ -14,15 +14,11 @@ export default {
       type: String,
       default: "A"
     },
-    selected: {
-      type: Number,
-      default: 1
-    }
   },
   computed: {
-    ...mapGetters(["sets"]),
+    ...mapGetters(["sets", "selected_question"]),
     check: function() {
-      return this.sets[this.selected - 1].choose.includes(this.label);
+      return this.sets[this.selected_question - 1].choose.includes(this.label);
     }
   },
   methods: {

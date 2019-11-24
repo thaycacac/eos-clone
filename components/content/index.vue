@@ -3,18 +3,17 @@
     <div class="f-left">
       <p class="f-answer mt-4">Answer</p>
       <f-answer
-        v-for="n in sets[selected - 1].number_question"
+        v-for="n in sets[selected_question - 1].number_question"
         :key="n"
         :label="answers[n - 1]"
-        :selected="selected"
         @handleChoose="handleChoose"
       />
     </div>
     <div class="f-right">
-      <p class="f-title">Multiple choices {{ selected }}/50</p>
+      <p class="f-title">Multiple choices {{ selected_question }}/50</p>
       <div class="f-content" :style="`font-size: ${font_size}px; font-family: ${font_family}`">
         <p>(Choose 1 answer)</p>
-        <span class="f-term" v-html="sets[selected - 1].question" />
+        <span class="f-term" v-html="sets[selected_question - 1].question" />
       </div>
     </div>
   </div>
@@ -24,12 +23,6 @@
 import { mapGetters } from "vuex";
 import FAnswer from "./answer";
 export default {
-  props: {
-    selected: {
-      type: Number,
-      default: 1
-    }
-  },
   components: {
     FAnswer
   },
@@ -39,15 +32,15 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["sets", "font_size", "font_family"])
+    ...mapGetters(["sets", "font_size", "font_family", "selected_question"])
   },
   methods: {
     handleChoose(answer) {
-      if (!this.sets[this.selected - 1].choose.includes(answer)) {
-        this.sets[this.selected - 1].choose.push(answer);
+      if (!this.sets[this.selected_question - 1].choose.includes(answer)) {
+        this.sets[this.selected_question - 1].choose.push(answer);
       } else {
-        const index = this.sets[this.selected - 1].choose.indexOf(answer);
-        this.sets[this.selected - 1].choose.splice(index, 1);
+        const index = this.sets[this.selected_question - 1].choose.indexOf(answer);
+        this.sets[this.selected_question - 1].choose.splice(index, 1);
       }
     }
   }

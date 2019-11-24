@@ -14,7 +14,7 @@
     </b-row>
     <div class="mb-2 f-body-main">
       <f-tabs />
-      <f-content class="f-box" :selected="selected" />
+      <f-content class="f-box" />
     </div>
     <div class="f-footer">
       <f-question
@@ -22,7 +22,6 @@
         :key="n"
         :number="n"
         :completed="sets[n - 1].choose.length !== 0 ? true : false"
-        @handleSelected="handleSelected"
       />
       <br />
       <f-checkbox />
@@ -54,11 +53,6 @@ export default {
     FQuestion,
     FModal
   },
-  data() {
-    return {
-      selected: 1
-    };
-  },
   asyncData({ store }) {
     const { created_by, title, terms, id } = data;
 
@@ -88,11 +82,6 @@ export default {
     return {
       sets: sets
     };
-  },
-  methods: {
-    handleSelected(n) {
-      this.selected = n;
-    }
   }
 };
 </script>

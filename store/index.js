@@ -11,6 +11,7 @@ const store = () => new Vuex.Store({
     font_family: 'Microsoft Sans Serif',
     is_finish: false,
     is_show_modal: false,
+    selected_question: 1
   },
   mutations: {
     addSets(state, data) {
@@ -39,6 +40,9 @@ const store = () => new Vuex.Store({
     },
     addShowModal(state, data) {
       state.is_show_modal = data
+    },
+    addSelectedQuestion(state, data) {
+      state.selected_question = data
     }
   },
   getters: {
@@ -68,6 +72,9 @@ const store = () => new Vuex.Store({
     },
     is_show_modal(state) {
       return state.is_show_modal
+    },
+    selected_question(state) {
+      return state.selected_question
     }
   }
 })

@@ -3,12 +3,13 @@
     class="f-button"
     type="button"
     :value="number"
-    :class="completed === true ? 'f-completed': ''"
-    @click="handleSelected"
+    :class="[completed === true ? 'f-completed': '', selected_question === number ? 'f-focus' : '']"
+    @click="addSelectedQuestion(number)"
   />
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
 export default {
   props: {
     number: {
@@ -20,11 +21,10 @@ export default {
       default: false
     }
   },
-  methods: {
-    handleSelected() {
-      this.$emit("handleSelected", this.number);
-    }
-  }
+  computed: {
+    ...mapGetters(["selected_question"])
+  },
+  methods: mapMutations(['addSelectedQuestion'])
 };
 </script>
 
@@ -36,6 +36,12 @@ export default {
   border: rgb(204, 204, 204) 3px solid;
   background: none;
   font-size: 13px;
+  &:focus {
+    outline: none;
+  }
+}
+.f-focus {
+  border: rgb(90, 90, 90) 3px solid;
 }
 .f-completed {
   background: #abff00;
