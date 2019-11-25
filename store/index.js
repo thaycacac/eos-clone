@@ -11,7 +11,9 @@ const store = () => new Vuex.Store({
     font_family: 'Microsoft Sans Serif',
     is_finish: false,
     is_show_modal: false,
-    selected_question: 1
+    selected_question: 1,
+    mode: 'learn',
+    is_red: false,
   },
   mutations: {
     addSets(state, data) {
@@ -43,6 +45,12 @@ const store = () => new Vuex.Store({
     },
     addSelectedQuestion(state, data) {
       state.selected_question = data
+    },
+    addMode(state, data) {
+      state.mode = data
+    },
+    addRed(state, data) {
+      state.is_red = data
     }
   },
   getters: {
@@ -75,6 +83,12 @@ const store = () => new Vuex.Store({
     },
     selected_question(state) {
       return state.selected_question
+    },
+    mode(state) {
+      return state.mode
+    },
+    is_red(state) {
+      return state.is_red
     }
   }
 })

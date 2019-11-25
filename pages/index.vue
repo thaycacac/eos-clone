@@ -1,5 +1,9 @@
 <template>
-  <b-container fluid class="f-wrapall d-flex justify-content-between flex-column">
+  <b-container
+    fluid
+    class="f-wrapall d-flex justify-content-between flex-column"
+    :style="is_red ? 'background: red' : 'background: #f0f0f0'"
+  >
     <b-row class="f-header" no-gutters>
       <b-col cols="5">
         <div class="float-right mr-3">
@@ -33,6 +37,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from "vuex";
 import data from "./data";
 import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
@@ -82,13 +87,21 @@ export default {
     return {
       sets: sets
     };
+  },
+  computed: {
+    ...mapGetters(["is_red"])
+  },
+  methods: mapMutations(["addRed"]),
+  mounted() {
+    const f = setTimeout(() => {
+      this.addRed(true);
+    }, 2000);
   }
 };
 </script>
 
 <style lang="scss">
 .f-wrapall {
-  background: red;
   padding-top: 10px;
   padding-bottom: 10px;
   height: 100vh;

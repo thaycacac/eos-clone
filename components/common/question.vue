@@ -41,7 +41,8 @@ export default {
   }
 }
 .f-focus {
-  border: rgb(90, 90, 90) 3px solid;
+  padding: 1px 10px;
+  border: rgb(122, 122, 122) 2px solid;
 }
 .f-completed {
   background: #abff00;

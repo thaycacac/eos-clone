@@ -17,19 +17,19 @@
         <tr class="f-row">
           <td class="f-label">Exam Code:</td>
           <td>
-            <f-input />
+            <f-input placeholder="Paste link quizlet" />
           </td>
         </tr>
         <tr class="f-row">
           <td class="f-label">User Name:</td>
           <td>
-            <f-input />
+            <f-input value="Thaycacac" />
           </td>
         </tr>
         <tr class="f-row">
-          <td class="f-label">Password:</td>
+          <td class="f-label">Settings:</td>
           <td>
-            <f-input />
+            <f-checkbox />
           </td>
         </tr>
         <tr class="f-row">
@@ -65,11 +65,13 @@ import { mapGetters, mapMutations } from "vuex";
 import FClose from "./close";
 import FInput from "./input";
 import FButton from "./button";
+import FCheckbox from "./checkbox";
 export default {
   components: {
     FClose,
     FInput,
-    FButton
+    FButton,
+    FCheckbox
   },
   computed: {
     ...mapGetters(["is_show_modal"])
