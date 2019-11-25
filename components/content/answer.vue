@@ -1,9 +1,16 @@
 <template>
-  <label class="f-container">
-    {{ label }}
-    <input type="checkbox" :checked="check" :value="label" @click="handleChoose" />
-    <span class="f-checkmark"></span>
-  </label>
+  <div>
+    <label class="f-container" v-if="mode === 'test'">
+      {{ label }}
+      <input type="checkbox" :checked="check" :value="label" @click="handleChoose" />
+      <span class="f-checkmark"></span>
+    </label>
+    <label class="f-container" v-else>
+      {{ label }}
+      <input type="checkbox" :checked="checkLearn" :value="label" @click="handleChoose" />
+      <span class="f-checkmark"></span>
+    </label>
+  </div>
 </template>
 
 <script>
@@ -13,12 +20,15 @@ export default {
     label: {
       type: String,
       default: "A"
-    },
+    }
   },
   computed: {
-    ...mapGetters(["sets", "selected_question"]),
+    ...mapGetters(["sets", "selected_question", "mode"]),
     check: function() {
       return this.sets[this.selected_question - 1].choose.includes(this.label);
+    },
+    checkLearn: function() {
+      return this.sets[this.selected_question - 1].answers.includes(this.label);
     }
   },
   methods: {

@@ -29,7 +29,7 @@ export default {
   "class_ids": [],
   "terms": [{
       "id": 13383529372,
-      "term": "A",
+      "term": "AB",
       "definition": "Which variables can use only by one user but in all pages? \nA Session\nB. Application\nC. ViewState\nD. Cookie",
       "image": null,
       "rank": 0
@@ -57,7 +57,7 @@ export default {
     },
     {
       "id": 13383529376,
-      "term": "A",
+      "term": "AC",
       "definition": "The...method of the ...object is used to redirect the user to another page.\n[A] Redirect, Response\n[B] Redirect, Request \n[C] Form.Let, Request \n[D] Form.Get, Request",
       "image": null,
       "rank": 4

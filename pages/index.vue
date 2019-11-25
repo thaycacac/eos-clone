@@ -64,12 +64,12 @@ export default {
     const sets = terms.map(item => {
       if (item.definition.length >= item.term.length) {
         item.question = item.definition.trim();
-        item.answer = item.term.trim();
+        item.answers = item.term.trim().split("");
         delete item.definition;
         delete item.term;
       } else {
-        item.question = item.term;
-        item.answer = item.definition;
+        item.question = item.term.trim();
+        item.answers = item.definition.trim().split("");
         delete item.definition;
         delete item.term;
       }
