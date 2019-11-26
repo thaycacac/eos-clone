@@ -59,7 +59,7 @@ export default {
     FModal
   },
   asyncData({ store }) {
-    const { created_by, title, terms, id } = data;
+    const { title, terms, id } = data;
 
     const sets = terms.map(item => {
       if (item.definition.length >= item.term.length) {
@@ -82,7 +82,6 @@ export default {
     store.commit("addServer", id);
     store.commit("addTotal", terms.length);
     store.commit("addExamCode", title);
-    store.commit("addStudent", created_by);
     store.commit("addSets", terms);
     return {
       sets: sets

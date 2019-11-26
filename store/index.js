@@ -6,7 +6,7 @@ const store = () => new Vuex.Store({
     server: '',
     total: 0,
     exam_code: '',
-    student: '',
+    student: 'Thaycacac',
     font_size: 15,
     font_family: 'Microsoft Sans Serif',
     is_finish: false,
@@ -14,6 +14,45 @@ const store = () => new Vuex.Store({
     selected_question: 1,
     mode: 'learn',
     is_red: false,
+    link_quiz: '',
+    is_shuffle: false,
+  },
+  actions: {
+    SET_SHOW_MODAL({
+      commit
+    }, data) {
+      commit('addShowModal', data)
+    },
+    SET_MODE({
+      commit
+    }, data) {
+      commit('addMode', data)
+    },
+    SET_STUDENT({
+      commit
+    }, data) {
+      commit('addStudent', data)
+    },
+    SET_MODE({
+      commit
+    }, data) {
+      commit('addMode', data)
+    },
+    SET_RED({
+      commit
+    }, data) {
+      commit('addRed', data)
+    },
+    SET_SHUFFLE({
+      commit
+    }, data) {
+      commit('addShuffle', data)
+    },
+    SET_LINK_QUIZ({
+      commit
+    }, data) {
+      commit('addLinkQuiz', data)
+    },
   },
   mutations: {
     addSets(state, data) {
@@ -51,6 +90,12 @@ const store = () => new Vuex.Store({
     },
     addRed(state, data) {
       state.is_red = data
+    },
+    addShuffle(state, data) {
+      state.is_shuffle = data
+    },
+    addLinkQuiz(state, data) {
+      state.link_quiz = data
     }
   },
   getters: {
@@ -89,6 +134,12 @@ const store = () => new Vuex.Store({
     },
     is_red(state) {
       return state.is_red
+    },
+    is_shuffle(state) {
+      return state.is_shuffle
+    },
+    link_quiz(state) {
+      return state.link_quiz
     }
   }
 })

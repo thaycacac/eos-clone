@@ -6,6 +6,7 @@
     :value="value"
     :placeholder="placeholder"
     :style="disabled ? 'color: #949494; border-color: #949494' : ''"
+    @input="handleChange($event.target.value)"
   />
 </template>
 
@@ -23,6 +24,18 @@ export default {
     value: {
       type: String,
       default: ""
+    },
+    of: {
+      type: String
+    }
+  },
+  methods: {
+    handleChange(value) {
+      if (this.of === "username") {
+        this.$emit("handleUsername", value);
+      } else {
+        this.$emit("handleLinkQuiz", value);
+      }
     }
   }
 };

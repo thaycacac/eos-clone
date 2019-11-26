@@ -2,29 +2,56 @@
   <div>
     <label class="f-container">
       Danger
-      <input type="checkbox" :checked="is_red" @click="addRed(!is_red)" />
+      <input
+        type="checkbox"
+        :checked="settings.danger"
+        @click="settings.danger = !settings.danger; $emit('handleDanger', settings.danger)"
+      />
       <span class="f-checkmark"></span>
     </label>
     <label class="f-container">
       Learn
-      <input type="checkbox" :checked="mode === 'learn'" @click="addMode('learn')" />
+      <input
+        type="checkbox"
+        :checked="mode === 'learn'"
+        value="learn"
+        @click="$emit('handleMode', 'learn')"
+      />
       <span class="f-checkmark"></span>
     </label>
     <label class="f-container">
       Test
-      <input type="checkbox" :checked="mode === 'test'" @click="addMode('test')" />
+      <input
+        type="checkbox"
+        :checked="mode === 'test'"
+        value="test"
+        @click="$emit('handleMode', 'test')"
+      />
       <span class="f-checkmark"></span>
     </label>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapGetters } from "vuex";
 export default {
-  computed: {
-    ...mapGetters(["mode", "is_red"])
+  props: {
+    settings: {
+      type: Object,
+      required: true,
+      default: function() {
+        return {};
+      }
+    },
+    mode: {
+      type: String,
+      required: true,
+      default: ""
+    }
   },
-  methods: mapMutations(["addMode", "addRed"])
+  computed: {
+    ...mapGetters(["is_red"])
+  }
 };
 </script>
 

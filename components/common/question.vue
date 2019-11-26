@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex'
+import { mapMutations, mapGetters } from "vuex";
 export default {
   props: {
     number: {
@@ -24,7 +24,7 @@ export default {
   computed: {
     ...mapGetters(["selected_question"])
   },
-  methods: mapMutations(['addSelectedQuestion'])
+  methods: mapMutations(["addSelectedQuestion"])
 };
 </script>
 

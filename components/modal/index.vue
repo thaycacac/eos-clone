@@ -17,19 +17,36 @@
         <tr class="f-row">
           <td class="f-label">Exam Code:</td>
           <td>
-            <f-input placeholder="Paste link quizlet" />
+            <f-input
+              placeholder="Paste link quizlet"
+              @handleUsername="handleUsername"
+              @handleLinkQuiz="handleLinkQuiz"
+              :value="link_quiz"
+              of="link_quiz"
+            />
           </td>
         </tr>
         <tr class="f-row">
           <td class="f-label">User Name:</td>
           <td>
-            <f-input value="Thaycacac" />
+            <f-input
+              @handleUsername="handleUsername"
+              @handleLinkQuiz="handleLinkQuiz"
+              :value="username"
+              of="username"
+            />
           </td>
         </tr>
         <tr class="f-row">
           <td class="f-label">Settings:</td>
           <td>
-            <f-checkbox />
+            <f-checkbox
+              :settings="settings"
+              :mode="settings.mode"
+              @handleDanger="handleDanger"
+              @handleMode="handleMode"
+              @handleShuffle="handleShuffle"
+            />
           </td>
         </tr>
         <tr class="f-row">
@@ -41,7 +58,7 @@
         <tr class="f-row-button">
           <td></td>
           <td>
-            <f-button value="Loggin" class="mr-5" />
+            <f-button value="Apply" class="mr-5" @handleApply="handleApply" />
             <f-button value="Exit" :focus="false" />
           </td>
         </tr>
@@ -73,6 +90,17 @@ export default {
     FButton,
     FCheckbox
   },
+  data() {
+    return {
+      link_quiz: "",
+      username: "thaycacac",
+      settings: {
+        danger: true,
+        mode: "learn",
+        shuffle: false
+      }
+    };
+  },
   computed: {
     ...mapGetters(["is_show_modal"])
   },
@@ -81,6 +109,31 @@ export default {
   },
   methods: mapMutations(["addShowModal"]),
   methods: {
+    handleDanger(data) {
+      this.settings.danger = data;
+    },
+    handleMode(data) {
+      this.settings.mode = data;
+    },
+    handleShuffle(data) {
+      this.settings.shuffle = data;
+    },
+    handleUsername(data) {
+      this.username = data;
+    },
+    handleLinkQuiz(data) {
+      console.log(data);
+      this.link_quiz = data;
+    },
+    handleApply() {
+      this.$store.dispatch("SET_STUDENT", this.username);
+      this.$store.dispatch("SET_MODE", this.settings.mode);
+      this.$store.dispatch("SET_MODE", this.settings.mode);
+      this.$store.dispatch("SET_RED", this.settings.danger);
+      this.$store.dispatch("SET_SHUFFLE", this.settings.shuffle);
+      this.$store.dispatch("SET_LINK_QUIZ", this.link_quiz);
+      this.$store.dispatch("SET_SHOW_MODAL", false);
+    },
     dragElement(elmnt) {
       var pos1 = 0,
         pos2 = 0,

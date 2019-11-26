@@ -1,8 +1,8 @@
 {
-  "name": "eos-clone",
+  "name": "eos",
   "version": "1.0.0",
-  "description": "My great Nuxt.js project",
-  "author": "hoapn&lt;thaycacac@gmail.com&gt;",
+  "description": "EOS Clone",
+  "author": "hoapn<thaycacac@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
