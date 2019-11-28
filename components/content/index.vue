@@ -8,6 +8,7 @@
         :label="answers[n - 1]"
         @handleChoose="handleChoose"
       />
+      <f-next />
     </div>
     <div class="f-right">
       <p class="f-title">Multiple choices {{ selected_question }}/50</p>
@@ -22,9 +23,11 @@
 <script>
 import { mapGetters } from "vuex";
 import FAnswer from "./answer";
+import FNext from './next.vue'
 export default {
   components: {
-    FAnswer
+    FAnswer,
+    FNext
   },
   data() {
     return {
