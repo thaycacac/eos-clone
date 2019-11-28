@@ -25,10 +25,10 @@ export default {
   computed: {
     ...mapGetters(["sets", "selected_question", "mode"]),
     check: function() {
-      return this.sets[this.selected_question - 1].choose.includes(this.label);
+      return this.sets[this.selected_question - 1].choose.includes(this.label.toUpperCase());
     },
     checkLearn: function() {
-      return this.sets[this.selected_question - 1].answers.includes(this.label);
+      return this.sets[this.selected_question - 1].answers.includes(this.label.toUpperCase());
     }
   },
   methods: {

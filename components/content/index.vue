@@ -36,10 +36,10 @@ export default {
   },
   methods: {
     handleChoose(answer) {
-      if (!this.sets[this.selected_question - 1].choose.includes(answer)) {
-        this.sets[this.selected_question - 1].choose.push(answer);
+      if (!this.sets[this.selected_question - 1].choose.includes(answer.toUpperCase())) {
+        this.sets[this.selected_question - 1].choose.push(answer.toUpperCase());
       } else {
-        const index = this.sets[this.selected_question - 1].choose.indexOf(answer);
+        const index = this.sets[this.selected_question - 1].choose.indexOf(answer.toUpperCase());
         this.sets[this.selected_question - 1].choose.splice(index, 1);
       }
     }

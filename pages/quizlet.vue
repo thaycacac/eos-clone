@@ -38,6 +38,7 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
+import { getSets } from '@/utils/sets'
 import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
 import FInformation from "@/components/information";
@@ -66,23 +67,7 @@ export default {
       title
     } } = result
 
-    const sets = terms.map(item => {
-      if (item.definition.length >= item.term.length) {
-        item.question = item.definition.trim();
-        item.answers = item.term.trim().split("");
-        delete item.definition;
-        delete item.term;
-      } else {
-        item.question = item.term.trim();
-        item.answers = item.definition.trim().split("");
-        delete item.definition;
-        delete item.term;
-      }
-
-      item.choose = [];
-      item.number_question = item.question.split("\n").length - 1;
-      return item;
-    });
+    const sets = getSets(terms)
 
     store.commit("addServer", id);
     store.commit("addTotal", terms.length);
