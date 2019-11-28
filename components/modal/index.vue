@@ -78,11 +78,14 @@
 </template>
 
 <script>
+import { getIdQuizlet } from '@/utils/quizlet'
+import { getSets } from '@/utils/sets'
 import { mapGetters, mapMutations } from "vuex";
 import FClose from "./close";
 import FInput from "./input";
 import FButton from "./button";
 import FCheckbox from "./checkbox";
+import axios from 'axios'
 export default {
   components: {
     FClose,
@@ -125,7 +128,7 @@ export default {
       console.log(data);
       this.link_quiz = data;
     },
-    handleApply() {
+    async handleApply() {
       this.$store.dispatch("SET_STUDENT", this.username);
       this.$store.dispatch("SET_MODE", this.settings.mode);
       this.$store.dispatch("SET_MODE", this.settings.mode);
@@ -133,6 +136,14 @@ export default {
       this.$store.dispatch("SET_SHUFFLE", this.settings.shuffle);
       this.$store.dispatch("SET_LINK_QUIZ", this.link_quiz);
       this.$store.dispatch("SET_SHOW_MODAL", false);
+      if(this.link_quiz && getIdQuizlet(this.link_quiz)) {
+        window.location.href = `/quizlet?id=${getIdQuizlet(this.link_quiz)}`
+      } else if(this.link_quiz === '') {
+        return
+      }
+      else {
+        alert('Not bank')
+      }
     },
     dragElement(elmnt) {
       var pos1 = 0,

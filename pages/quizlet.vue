@@ -38,7 +38,6 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
-import { getSets } from '@/utils/sets'
 import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
 import FInformation from "@/components/information";
@@ -59,17 +58,36 @@ export default {
     FQuestion,
     FModal
   },
-  async asyncData({ store, params }) {
-    const result = await axios.get('https://api.quizlet.com/2.0/sets/457640148?client_id=ke9tZw8YM6')
-    const { data } = result
-    const { title, terms, id } = data;
+  async asyncData({ store, query }) {
+    const result = await axios.get(`https://api.quizlet.com/2.0/sets/${query.id}?client_id=ke9tZw8YM6`)
+    const { data: {
+      terms,
+      id,
+      title
+    } } = result
 
-    const sets = getSets(terms)
+    const sets = terms.map(item => {
+      if (item.definition.length >= item.term.length) {
+        item.question = item.definition.trim();
+        item.answers = item.term.trim().split("");
+        delete item.definition;
+        delete item.term;
+      } else {
+        item.question = item.term.trim();
+        item.answers = item.definition.trim().split("");
+        delete item.definition;
+        delete item.term;
+      }
+
+      item.choose = [];
+      item.number_question = item.question.split("\n").length - 1;
+      return item;
+    });
 
     store.commit("addServer", id);
     store.commit("addTotal", terms.length);
     store.commit("addExamCode", title);
-    store.commit("addSets", sets);
+    store.commit("addSets", terms);
     return {
       sets: sets
     };
