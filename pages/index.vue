@@ -60,7 +60,11 @@ export default {
     FModal
   },
   async asyncData({ store, params }) {
-    const result = await axios.get('https://api.quizlet.com/2.0/sets/457640148?client_id=ke9tZw8YM6')
+    const result = await axios.get('https://eos-backend.thaycacac.now.sh/?id=457640148', {
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
     const { data } = result
     const { title, terms, id } = data;
 
