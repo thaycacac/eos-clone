@@ -68,6 +68,7 @@ export default {
   .f-right {
     width: 100%;
     .f-content {
+      overflow-y: scroll;
       border-top: #707070 1px solid;
       border-left: #707070 1px solid;
       border-right: #e7e7e7 1px solid;

@@ -20,7 +20,7 @@
       <f-tabs />
       <f-content class="f-box" />
     </div>
-    <div class="f-footer pb-5">
+    <div class="f-footer">
       <f-question
         v-for="n in sets.length"
         :key="n"
@@ -38,7 +38,7 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
-import { getSets } from '@/utils/sets'
+import { getSets } from "@/utils/sets";
 import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
 import FInformation from "@/components/information";
@@ -47,7 +47,7 @@ import FTabs from "@/components/common/tabs";
 import FContent from "@/components/content";
 import FQuestion from "@/components/common/question";
 import FModal from "@/components/modal";
-import axios from 'axios'
+import axios from "axios";
 export default {
   components: {
     FCheckbox,
@@ -60,14 +60,14 @@ export default {
     FModal
   },
   async asyncData({ store, query }) {
-    const result = await axios.get(`https://api.quizlet.com/2.0/sets/${query.id}?client_id=ke9tZw8YM6`)
-    const { data: {
-      terms,
-      id,
-      title
-    } } = result
+    const result = await axios.get(
+      `https://api.quizlet.com/2.0/sets/${query.id}?client_id=ke9tZw8YM6`
+    );
+    const {
+      data: { terms, id, title }
+    } = result;
 
-    const sets = getSets(terms)
+    const sets = getSets(terms);
 
     store.commit("addServer", id);
     store.commit("addTotal", terms.length);
