@@ -91,8 +91,8 @@ export default {
 
 <style lang="scss">
 .f-wrapall {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   height: 100vh;
   .f-body-main {
     height: 100%;
