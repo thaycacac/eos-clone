@@ -4,7 +4,7 @@
     class="f-wrapall d-flex justify-content-between flex-column"
     :style="is_red ? 'background: red' : 'background: #f0f0f0'"
   >
-    <b-row class="f-header" no-gutters>
+    <b-row class="f-header noselect" no-gutters>
       <b-col cols="5">
         <div class="float-right mr-3">
           <f-checkbox />

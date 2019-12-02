@@ -20,7 +20,7 @@
       <f-tabs />
       <f-content class="f-box" />
     </div>
-    <div class="f-footer">
+    <div class="f-footer pb-5">
       <f-question
         v-for="n in sets.length"
         :key="n"

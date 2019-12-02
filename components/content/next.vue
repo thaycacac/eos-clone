@@ -23,5 +23,11 @@ export default {
   height: 23px;
   width: 64px;
   background: #e2e1dc;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: gray 1px solid;
+  }
 }
 </style>
