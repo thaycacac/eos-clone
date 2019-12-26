@@ -21,12 +21,23 @@
       <f-content class="f-box" />
     </div>
     <div class="f-footer">
-      <f-question
-        v-for="n in sets.length"
-        :key="n"
-        :number="n"
-        :completed="sets[n - 1].choose.length !== 0 ? true : false"
-      />
+      <template v-if="sets.length <= 50">
+        <f-question
+          v-for="n in sets.length"
+          :key="n"
+          :number="n"
+          :completed="sets[n - 1].choose.length !== 0 ? true : false"
+        />
+      </template>
+      <template v-else>
+        <f-question
+          v-for="n in sets.length"
+          v-show="isShowQuestion(n)"
+          :key="n"
+          :number="n"
+          :completed="sets[n - 1].choose.length !== 0 ? true : false"
+        />
+      </template>
       <br />
       <f-checkbox />
       <br />
@@ -61,7 +72,7 @@ export default {
   },
   async asyncData({ store, query }) {
     const result = await axios.get(
-      `https://api.quizlet.com/2.0/sets/${query.id}?client_id=ke9tZw8YM6`
+      `https://eos-backend.thaycacac.now.sh/?id=${query.id}`
     );
     const {
       data: { terms, id, title }
@@ -78,9 +89,21 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["is_red"])
+    ...mapGetters(["is_red", "selected_question"])
   },
   methods: mapMutations(["addRed"]),
+  methods: {
+    isShowQuestion(n) {
+      if (this.selected_question < 25) {
+        return n <= 50;
+      } else if (this.selected_question >= this.sets.length - 25) {
+        return n >= this.sets.length - 50;
+      }
+      return (
+        n > this.selected_question - 25 && n <= this.selected_question + 25
+      );
+    }
+  },
   mounted() {
     const f = setTimeout(() => {
       this.addRed(true);

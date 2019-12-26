@@ -23,7 +23,7 @@
 <script>
 import { mapGetters } from "vuex";
 import FAnswer from "./answer";
-import FNext from './next.vue'
+import FNext from "./next.vue";
 export default {
   components: {
     FAnswer,
@@ -31,7 +31,7 @@ export default {
   },
   data() {
     return {
-      answers: ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+      answers: ["A", "B", "C", "D", "E", "F", "G", "H"]
     };
   },
   computed: {
@@ -39,10 +39,16 @@ export default {
   },
   methods: {
     handleChoose(answer) {
-      if (!this.sets[this.selected_question - 1].choose.includes(answer.toUpperCase())) {
+      if (
+        !this.sets[this.selected_question - 1].choose.includes(
+          answer.toUpperCase()
+        )
+      ) {
         this.sets[this.selected_question - 1].choose.push(answer.toUpperCase());
       } else {
-        const index = this.sets[this.selected_question - 1].choose.indexOf(answer.toUpperCase());
+        const index = this.sets[this.selected_question - 1].choose.indexOf(
+          answer.toUpperCase()
+        );
         this.sets[this.selected_question - 1].choose.splice(index, 1);
       }
     }

@@ -38,7 +38,7 @@
 
 <script>
 import { mapGetters, mapMutations } from "vuex";
-import { getSets } from '@/utils/sets'
+import { getSets } from "@/utils/sets";
 import FCheckbox from "@/components/finish/checkbox";
 import FButton from "@/components/finish/button";
 import FInformation from "@/components/information";
@@ -47,7 +47,7 @@ import FTabs from "@/components/common/tabs";
 import FContent from "@/components/content";
 import FQuestion from "@/components/common/question";
 import FModal from "@/components/modal";
-import axios from 'axios'
+import axios from "axios";
 export default {
   components: {
     FCheckbox,
@@ -60,15 +60,18 @@ export default {
     FModal
   },
   async asyncData({ store, params }) {
-    const result = await axios.get('https://eos-backend.thaycacac.now.sh/?id=457640148', {
-      headers: {
-        'Access-Control-Allow-Origin': '*'
+    const result = await axios.get(
+      "https://eos-backend.thaycacac.now.sh/?id=457640148",
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
       }
-    })
-    const { data } = result
+    );
+    const { data } = result;
     const { title, terms, id } = data;
 
-    const sets = getSets(terms)
+    const sets = getSets(terms);
 
     store.commit("addServer", id);
     store.commit("addTotal", terms.length);
@@ -79,7 +82,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["is_red"])
+    ...mapGetters(["is_red, selected_question"])
   },
   methods: mapMutations(["addRed"]),
   mounted() {
