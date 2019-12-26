@@ -1,11 +1,11 @@
 <template>
-  <button class="f-button" @click="addShowModal(false)">X</button>
+  <button class="f-button" @click="addShowModal(false); addShowResult(false)">X</button>
 </template>
 
 <script>
 import { mapMutations } from "vuex";
 export default {
-  methods: mapMutations(["addShowModal"])
+  methods: mapMutations(["addShowModal", "addShowResult"])
 };
 </script>
 

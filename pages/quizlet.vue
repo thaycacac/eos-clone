@@ -45,6 +45,7 @@
         <f-button />
       </div>
       <f-modal />
+      <f-result />
     </b-container>
     <b-container
       fluid
@@ -67,6 +68,7 @@ import FTabs from "@/components/common/tabs";
 import FContent from "@/components/content";
 import FQuestion from "@/components/common/question";
 import FModal from "@/components/modal";
+import FResult from "@/components/result";
 import axios from "axios";
 export default {
   components: {
@@ -77,7 +79,8 @@ export default {
     FTabs,
     FContent,
     FQuestion,
-    FModal
+    FModal,
+    FResult
   },
   async asyncData({ store, query }) {
     const result = await axios.get(

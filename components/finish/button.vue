@@ -1,8 +1,18 @@
 <template>
   <button class="f-button">
-    <span class="f-text">Finish</span>
+    <span class="f-text" @click="addShowResult(!is_show_result)">Finish</span>
   </button>
 </template>
+
+<script>
+import { mapMutations, mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters(["is_show_result"])
+  },
+  methods: mapMutations(["addShowResult"])
+};
+</script>
 
 <style lang="scss" scoped>
 .f-button {

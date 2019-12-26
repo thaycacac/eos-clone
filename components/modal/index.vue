@@ -78,14 +78,15 @@
 </template>
 
 <script>
-import { getIdQuizlet } from '@/utils/quizlet'
-import { getSets } from '@/utils/sets'
+import { getIdQuizlet } from "@/utils/quizlet";
+import { getSets } from "@/utils/sets";
+import { dragElement } from "@/utils/dragElement";
 import { mapGetters, mapMutations } from "vuex";
 import FClose from "./close";
 import FInput from "./input";
 import FButton from "./button";
 import FCheckbox from "./checkbox";
-import axios from 'axios'
+import axios from "axios";
 export default {
   components: {
     FClose,
@@ -108,7 +109,7 @@ export default {
     ...mapGetters(["is_show_modal"])
   },
   mounted() {
-    this.dragElement(document.getElementById("f-modal"));
+    dragElement(document.getElementById("f-modal"));
   },
   methods: mapMutations(["addShowModal"]),
   methods: {
@@ -136,58 +137,12 @@ export default {
       this.$store.dispatch("SET_SHUFFLE", this.settings.shuffle);
       this.$store.dispatch("SET_LINK_QUIZ", this.link_quiz);
       this.$store.dispatch("SET_SHOW_MODAL", false);
-      if(this.link_quiz && getIdQuizlet(this.link_quiz)) {
-        window.location.href = `/quizlet?id=${getIdQuizlet(this.link_quiz)}`
-      } else if(this.link_quiz === '') {
-        return
-      }
-      else {
-        alert('Not bank')
-      }
-    },
-    dragElement(elmnt) {
-      var pos1 = 0,
-        pos2 = 0,
-        pos3 = 0,
-        pos4 = 0;
-      if (document.getElementById(elmnt.id + "-header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(
-          elmnt.id + "-header"
-        ).onmousedown = dragMouseDown;
+      if (this.link_quiz && getIdQuizlet(this.link_quiz)) {
+        window.location.href = `/quizlet?id=${getIdQuizlet(this.link_quiz)}`;
+      } else if (this.link_quiz === "") {
+        return;
       } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
-      }
-
-      function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-      }
-
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-        elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-      }
-
-      function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
+        alert("Not bank");
       }
     }
   }
