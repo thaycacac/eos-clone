@@ -1,50 +1,59 @@
 <template>
-  <b-container
-    fluid
-    class="f-wrapall d-flex justify-content-between flex-column"
-    :style="is_red ? 'background: red' : 'background: #f0f0f0'"
-  >
-    <b-row class="f-header" no-gutters>
-      <b-col cols="5">
-        <div class="float-right mr-3">
-          <f-checkbox />
-          <f-button />
-        </div>
-        <f-information />
-      </b-col>
-      <b-col cols="2">
-        <f-center />
-      </b-col>
-    </b-row>
-    <div class="mb-2 f-body-main">
-      <f-tabs />
-      <f-content class="f-box" />
-    </div>
-    <div class="f-footer">
-      <template v-if="sets.length <= 50">
-        <f-question
-          v-for="n in sets.length"
-          :key="n"
-          :number="n"
-          :completed="sets[n - 1].choose.length !== 0 ? true : false"
-        />
-      </template>
-      <template v-else>
-        <f-question
-          v-for="n in sets.length"
-          v-show="isShowQuestion(n)"
-          :key="n"
-          :number="n"
-          :completed="sets[n - 1].choose.length !== 0 ? true : false"
-        />
-      </template>
-      <br />
-      <f-checkbox />
-      <br />
-      <f-button />
-    </div>
-    <f-modal />
-  </b-container>
+  <div>
+    <b-container
+      fluid
+      class="f-wrapall d-flex justify-content-between flex-column hidden-mobile"
+      :style="is_red ? 'background: red' : 'background: #f0f0f0'"
+    >
+      <b-row class="f-header" no-gutters>
+        <b-col cols="5">
+          <div class="float-right mr-3">
+            <f-checkbox />
+            <f-button />
+          </div>
+          <f-information />
+        </b-col>
+        <b-col cols="2">
+          <f-center />
+        </b-col>
+      </b-row>
+      <div class="mb-2 f-body-main">
+        <f-tabs />
+        <f-content class="f-box" />
+      </div>
+      <div class="f-footer">
+        <template v-if="sets.length <= 50">
+          <f-question
+            v-for="n in sets.length"
+            :key="n"
+            :number="n"
+            :completed="sets[n - 1].choose.length !== 0 ? true : false"
+          />
+        </template>
+        <template v-else>
+          <f-question
+            v-for="n in sets.length"
+            v-show="isShowQuestion(n)"
+            :key="n"
+            :number="n"
+            :completed="sets[n - 1].choose.length !== 0 ? true : false"
+          />
+        </template>
+        <br />
+        <f-checkbox />
+        <br />
+        <f-button />
+      </div>
+      <f-modal />
+    </b-container>
+    <b-container
+      fluid
+      class="f-wrapall d-flex justify-content-between flex-column show-mobile"
+      :style="is_red ? 'background: red' : 'background: #f0f0f0'"
+    >
+      <p>Thaycacac</p>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -122,6 +131,16 @@ export default {
     .f-box {
       height: calc(100vh - 321px);
     }
+  }
+}
+.hidden-mobile {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+.show-mobile {
+  @media (min-width: 768px) {
+    display: none !important;
   }
 }
 </style>

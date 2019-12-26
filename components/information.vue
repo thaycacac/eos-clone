@@ -2,7 +2,7 @@
   <div class="f-wrap-info">
     <div>
       <span class="f-label f-machine">Machine:</span>
-      <span class="f-value">THAYCACAC_SERVER</span>
+      <span class="f-value">THAYCACAC_HOAPN</span>
       <span class="f-label f-student">Student:</span>
       <span class="f-value">{{ student }}</span>
     </div>
@@ -14,7 +14,7 @@
     </div>
     <div>
       <span class="f-label f-duration">Duration:</span>
-      <span class="f-value">{{ total }} minutes</span>
+      <span class="f-value">60 minutes</span>
       <span class="f-label f-open-code">Open Code:</span>
       <span class="f-value">
         <f-input />
